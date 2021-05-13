@@ -34,12 +34,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/animals\/Monarch Butterfly.jpg" : {
+    "\/deploy\/img\/animals\/MonarchButterfly.jpg" : {
       "ft" : 16384,
       "iS" : 64135,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/animals\/Monarch Butterfly.jpg",
+      "oAP" : "\/deploy\/img\/animals\/MonarchButterfly.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -60,12 +60,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/animals\/Sea Lion.jpg" : {
+    "\/deploy\/img\/animals\/Seahorse.jpg" : {
       "ft" : 16384,
-      "iS" : 179483,
+      "iS" : 78354,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/animals\/Sea Lion.jpg",
+      "oAP" : "\/deploy\/img\/animals\/Seahorse.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -73,12 +73,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/animals\/Seahorse.jpg" : {
+    "\/deploy\/img\/animals\/SeaLion.jpg" : {
       "ft" : 16384,
-      "iS" : 78354,
+      "iS" : 179483,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/animals\/Seahorse.jpg",
+      "oAP" : "\/deploy\/img\/animals\/SeaLion.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -99,6 +99,29 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/dailyschedule\/PenguinPhoto.png" : {
+      "ft" : 32768,
+      "iS" : 326944,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/dailyschedule\/PenguinPhoto.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/events\/ring.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/events\/ring.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/deploy\/img\/header\/Logo.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -118,6 +141,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/upcomingevents\/upcomingeventspic.png" : {
+      "ft" : 32768,
+      "iS" : 361488,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/upcomingevents\/upcomingeventspic.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
