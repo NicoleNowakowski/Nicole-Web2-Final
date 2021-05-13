@@ -21,12 +21,12 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/deploy\/img\/animals\/clownfishphoto.jpg" : {
+    "\/deploy\/img\/animals\/ClownFish.jpg" : {
       "ft" : 16384,
-      "iS" : 157344,
+      "iS" : 130731,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/animals\/clownfishphoto.jpg",
+      "oAP" : "\/deploy\/img\/animals\/ClownFish.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -34,12 +34,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/animals\/monarchbutterflyphoto.jpg" : {
+    "\/deploy\/img\/animals\/Monarch Butterfly.jpg" : {
       "ft" : 16384,
-      "iS" : 118892,
+      "iS" : 64135,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/animals\/monarchbutterflyphoto.jpg",
+      "oAP" : "\/deploy\/img\/animals\/Monarch Butterfly.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -60,12 +60,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/animals\/seahorsephoto.jpg" : {
+    "\/deploy\/img\/animals\/Sea Lion.jpg" : {
       "ft" : 16384,
-      "iS" : 824591,
+      "iS" : 179483,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/animals\/seahorsephoto.jpg",
+      "oAP" : "\/deploy\/img\/animals\/Sea Lion.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -73,12 +73,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/animals\/sealionphoto.jpg" : {
+    "\/deploy\/img\/animals\/Seahorse.jpg" : {
       "ft" : 16384,
-      "iS" : 977898,
+      "iS" : 78354,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/animals\/sealionphoto.jpg",
+      "oAP" : "\/deploy\/img\/animals\/Seahorse.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
