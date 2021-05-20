@@ -510,8 +510,6 @@ header #search form button {
     Footer
 ============= */
 footer {
-  background-color: #2A3036;
-  color: #C8C7BC;
   padding: 16px;
 }
 @media (min-width: 1200px) {
@@ -527,14 +525,14 @@ footer > div {
 }
 @media (min-width: 768px) {
   footer > div {
-    grid-template-areas: "locations newsletter" "locations social";
-    grid-template-columns: 50% auto;
+    grid-template-areas: "social . hours info";
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 576px) {
   footer > div {
-    grid-template-areas: "locations newsletter social";
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "social info";
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1200px) {
@@ -542,79 +540,18 @@ footer > div {
     grid-area: footer;
   }
 }
-footer > div h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
 footer > div section {
   padding-top: 16px;
 }
-footer > div section h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  padding-bottom: 8px;
-}
-footer > div section ul {
-  border-bottom: 1px solid #C8C7BC;
-  padding-bottom: 16px;
-}
-footer > div section ul li {
-  display: flex;
-  margin-bottom: 16px;
-}
-footer > div section ul li div {
-  align-items: center;
-  display: flex;
-  margin-right: 16px;
-}
 @media (min-width: 768px) {
-  footer > div #locations {
-    grid-area: locations;
-  }
-}
-footer > div #locations i {
-  color: #FFD205;
-}
-footer > div #locations a:link,
-footer > div #locations a:visited {
-  color: #C8C7BC;
-}
-@media (min-width: 768px) {
-  footer > div #locations #nova {
-    border: none;
+  footer > div #info {
+    grid-area: info;
   }
 }
 @media (min-width: 768px) {
-  footer > div #newsletter {
-    grid-area: newsletter;
+  footer > div #hours {
+    grid-area: hours;
   }
-}
-footer > div #newsletter form input {
-  background-color: #ADB5BD;
-  border: none;
-  color: #2A3036;
-  padding: 16px 2%;
-  width: 96%;
-}
-footer > div #newsletter form input::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #2A3036;
-  /* Firefox */
-  opacity: 1;
-}
-footer > div #newsletter form input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #2A3036;
-}
-footer > div #newsletter form input::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #2A3036;
-}
-footer > div #newsletter form button {
-  display: flex;
-  margin-left: auto;
-  margin-top: 16px;
 }
 @media (min-width: 768px) {
   footer > div #social {
@@ -625,11 +562,6 @@ footer > div #newsletter form button {
 @media (min-width: 1024px) {
   footer > div #social {
     margin-top: 0px;
-  }
-}
-@media (min-width: 1024px) {
-  footer > div #social h1 {
-    text-align: right;
   }
 }
 footer > div #social ul {
@@ -655,8 +587,189 @@ footer > div #social ul li a:visited {
   color: #fff;
   font-size: 1.875rem;
 }
-footer > div #social ul li a:link:hover, footer > div #social ul li a:link:active,
-footer > div #social ul li a:visited:hover,
-footer > div #social ul li a:visited:active {
-  color: #FFD205;
+#hero {
+  align-items: flex-end;
+  background-image: url("../img/hero/herophoto.jpg");
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 770pt;
+}
+@media (min-width: 768px) {
+  #plan {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". plan .";
+  }
+}
+@media (min-width: 1024px) {
+  #plan {
+    grid-template-columns: auto 1024px auto;
+  }
+}
+@media (min-width: 768px) {
+  #plan > div {
+    grid-area: plan;
+  }
+}
+@media (min-width: 768px) {
+  #plan > div ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "p1 p2 p2" "p3 p3 p4";
+    gap: 16px;
+  }
+}
+@media (min-width: 768px) {
+  #plan > div ul #p1 {
+    grid-area: p1;
+  }
+}
+@media (min-width: 768px) {
+  #plan > div ul #p2 {
+    grid-area: p2;
+  }
+}
+@media (min-width: 768px) {
+  #plan > div ul #p3 {
+    grid-area: p3;
+  }
+}
+@media (min-width: 768px) {
+  #plan > div ul #p4 {
+    grid-area: p4;
+  }
+}
+@media (min-width: 768px) {
+  #plan > div ul #p5 {
+    grid-area: p5;
+  }
+}
+
+@media (min-width: 768px) {
+  #animals {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". animals .";
+  }
+}
+@media (min-width: 1024px) {
+  #animals {
+    grid-template-columns: auto 1024px auto;
+  }
+}
+@media (min-width: 768px) {
+  #animals > div {
+    grid-area: animals;
+  }
+}
+@media (min-width: 576px) {
+  #animals > div ul {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "a1";
+  }
+}
+@media (min-width: 768px) {
+  #animals > div ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a1 a1 a2 a2" "a1 a1 a3 a4";
+  }
+}
+@media (min-width: 1024px) {
+  #animals > div ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a1 a1 a2 a2" "a1 a1 a3 a4" "a1 a1 a5 a5";
+    gap: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  #animals > div ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a1 a1 a2 a2" "a1 a1 a3 a4" "a1 a1 a5 a5";
+    gap: 16px;
+  }
+}
+#animals > div ul li img {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  #animals #a1 {
+    grid-area: a1;
+  }
+}
+@media (min-width: 768px) {
+  #animals #a2 {
+    grid-area: a2;
+  }
+}
+@media (min-width: 768px) {
+  #animals #a3 {
+    grid-area: a3;
+  }
+}
+@media (min-width: 768px) {
+  #animals #a4 {
+    grid-area: a4;
+  }
+}
+@media (min-width: 768px) {
+  #animals #a5 {
+    grid-area: a5;
+  }
+}
+
+@media (min-width: 768px) {
+  #events {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". events .";
+  }
+}
+@media (min-width: 1024px) {
+  #events {
+    grid-template-columns: auto 1024px auto;
+  }
+}
+@media (min-width: 768px) {
+  #events > div {
+    grid-area: events;
+  }
+}
+@media (min-width: 576px) {
+  #events > div ul {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "bday" "weddings" "social" "corporate";
+  }
+}
+@media (min-width: 768px) {
+  #events > div ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "bday weddings" "social corporate";
+  }
+}
+@media (min-width: 768px) {
+  #events > div #bday {
+    grid-area: bday;
+  }
+}
+@media (min-width: 768px) {
+  #events > div #weddings {
+    grid-area: weddings;
+  }
+}
+@media (min-width: 768px) {
+  #events > div #social {
+    grid-area: social;
+  }
+}
+@media (min-width: 768px) {
+  #events > div #corporate {
+    grid-area: corporate;
+  }
 }

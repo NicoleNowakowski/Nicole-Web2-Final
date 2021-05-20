@@ -1,0 +1,74 @@
+#plan{
+
+    @include md{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". plan .";
+    }
+
+    @include lg{
+        grid-template-columns: auto 1024px auto;
+    }
+   
+    >div{
+
+        @include md{
+            grid-area: plan;
+        }
+
+        h1{
+
+        }
+
+        ul{
+
+            @include md{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas: "p1 p2 p2"
+                "p3 p3 p4";
+                gap: 16px;
+            }
+
+          
+            li{
+    
+    
+            
+            }
+
+            #p1{
+                @include md{
+                    grid-area: p1;
+                }
+            }
+
+            #p2{
+                @include md{
+                    grid-area: p2;
+                }
+            }
+
+            #p3{
+                @include md{
+                    grid-area: p3;
+                }
+            }
+
+            #p4{
+                @include md{
+                    grid-area: p4;
+                }
+            }
+
+            #p5{
+                @include md{
+                    grid-area: p5;
+                }
+            }
+        }
+    }
+}
+
+
+

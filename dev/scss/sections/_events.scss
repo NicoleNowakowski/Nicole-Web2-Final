@@ -1,0 +1,56 @@
+#events{
+    @include md{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". events .";
+    }
+
+    @include lg{
+        grid-template-columns: auto 1024px auto;
+    }
+
+    >div{
+@include md {
+        grid-area: events;
+}
+
+ul {
+    @include sm{
+        display: grid;
+    grid-template-columns: 100%;
+        grid-template-areas: "bday"
+        "weddings"
+        "social" 
+        "corporate";}
+
+        @include md{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: "bday weddings"
+            "social corporate" ;
+        }
+    }
+        
+
+#bday{
+    @include md {
+    grid-area: bday;
+}
+}
+#weddings{
+    @include md {
+    grid-area: weddings;
+}
+}
+#social{ @include md {
+    grid-area: social;
+}
+}
+#corporate{
+    @include md {
+    grid-area: corporate ;
+}
+}
+
+    }
+}
