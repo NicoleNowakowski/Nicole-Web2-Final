@@ -1,0 +1,52 @@
+#dailyschedule {
+
+    @include md {
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". dailyschedule .";
+    }
+
+    @include lg {
+        grid-template-columns: auto 1024px auto;
+    }
+
+    >div {
+
+        @include md {
+            grid-area: dailyschedule;
+        }
+        h1 {}
+
+div{
+        @include md {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "pic times";
+            gap: 106px;
+        }
+
+        ul {
+
+        }
+        aside {
+
+        }
+    }
+}
+
+    #times {
+        @include md {
+            grid-area: times;
+        }
+    }
+
+    #pic {
+        @include md {
+            grid-area: pic;
+        }
+    }
+
+
+
+
+}

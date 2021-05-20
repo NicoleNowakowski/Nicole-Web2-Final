@@ -20,14 +20,14 @@ ul {
     grid-template-columns: 100%;
         grid-template-areas: "bday"
         "weddings"
-        "social" 
+        "socialevents" 
         "corporate";}
 
         @include md{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             grid-template-areas: "bday weddings"
-            "social corporate" ;
+            "socialevents corporate" ;
         }
     }
         

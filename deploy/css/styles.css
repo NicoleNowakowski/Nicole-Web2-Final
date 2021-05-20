@@ -525,13 +525,13 @@ footer > div {
 }
 @media (min-width: 768px) {
   footer > div {
-    grid-template-areas: "social . hours info";
+    grid-template-areas: "socials . hours info";
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 576px) {
   footer > div {
-    grid-template-areas: "social info";
+    grid-template-areas: "socials info";
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -593,8 +593,79 @@ footer > div #social ul li a:visited {
   background-position: center;
   display: flex;
   justify-content: flex-start;
-  min-height: 770pt;
 }
+@media (min-width: 768px) {
+  #dailyschedule {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". dailyschedule .";
+  }
+}
+@media (min-width: 1024px) {
+  #dailyschedule {
+    grid-template-columns: auto 1024px auto;
+  }
+}
+@media (min-width: 768px) {
+  #dailyschedule > div {
+    grid-area: dailyschedule;
+  }
+}
+@media (min-width: 768px) {
+  #dailyschedule > div div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "pic times";
+    gap: 106px;
+  }
+}
+@media (min-width: 768px) {
+  #dailyschedule #times {
+    grid-area: times;
+  }
+}
+@media (min-width: 768px) {
+  #dailyschedule #pic {
+    grid-area: pic;
+  }
+}
+
+@media (min-width: 768px) {
+  #upcomingevents {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". upcomingevents .";
+  }
+}
+@media (min-width: 1024px) {
+  #upcomingevents {
+    grid-template-columns: auto 1024px auto;
+  }
+}
+@media (min-width: 768px) {
+  #upcomingevents > div {
+    grid-area: upcomingevents;
+  }
+}
+@media (min-width: 768px) {
+  #upcomingevents > div div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "dates picture";
+    gap: 106px;
+  }
+}
+@media (min-width: 768px) {
+  #upcomingevents #dates {
+    grid-area: dates;
+  }
+}
+@media (min-width: 768px) {
+  #upcomingevents #pic {
+    grid-area: pic;
+  }
+}
+
 @media (min-width: 768px) {
   #plan {
     display: grid;
@@ -621,28 +692,23 @@ footer > div #social ul li a:visited {
   }
 }
 @media (min-width: 768px) {
-  #plan > div ul #p1 {
+  #plan #information {
     grid-area: p1;
   }
 }
 @media (min-width: 768px) {
-  #plan > div ul #p2 {
+  #plan #specialoffers {
     grid-area: p2;
   }
 }
 @media (min-width: 768px) {
-  #plan > div ul #p3 {
+  #plan #covid {
     grid-area: p3;
   }
 }
 @media (min-width: 768px) {
-  #plan > div ul #p4 {
+  #plan #tickets {
     grid-area: p4;
-  }
-}
-@media (min-width: 768px) {
-  #plan > div ul #p5 {
-    grid-area: p5;
   }
 }
 
@@ -663,13 +729,6 @@ footer > div #social ul li a:visited {
     grid-area: animals;
   }
 }
-@media (min-width: 576px) {
-  #animals > div ul {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: "a1";
-  }
-}
 @media (min-width: 768px) {
   #animals > div ul {
     display: grid;
@@ -682,21 +741,20 @@ footer > div #social ul li a:visited {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a1 a1 a2 a2" "a1 a1 a3 a4" "a1 a1 a5 a5";
-    gap: 16px;
-  }
-}
-@media (min-width: 1200px) {
-  #animals > div ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "a1 a1 a2 a2" "a1 a1 a3 a4" "a1 a1 a5 a5";
-    gap: 16px;
+    gap: 20px;
   }
 }
 #animals > div ul li img {
   width: 100%;
 }
-@media (min-width: 576px) {
+#animals #a1 {
+  align-items: flex-end;
+  background-image: url("../img/animals/octopusphoto.jpg");
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+}
+@media (min-width: 768px) {
   #animals #a1 {
     grid-area: a1;
   }
@@ -716,7 +774,7 @@ footer > div #social ul li a:visited {
     grid-area: a4;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   #animals #a5 {
     grid-area: a5;
   }
@@ -743,14 +801,14 @@ footer > div #social ul li a:visited {
   #events > div ul {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "bday" "weddings" "social" "corporate";
+    grid-template-areas: "bday" "weddings" "socialevents" "corporate";
   }
 }
 @media (min-width: 768px) {
   #events > div ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "bday weddings" "social corporate";
+    grid-template-areas: "bday weddings" "socialevents corporate";
   }
 }
 @media (min-width: 768px) {

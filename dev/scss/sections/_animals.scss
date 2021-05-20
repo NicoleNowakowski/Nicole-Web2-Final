@@ -1,103 +1,90 @@
-#animals{
-    @include md{
+#animals {
+    @include md {
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". animals .";
     }
 
-    @include lg{
+    @include lg {
         grid-template-columns: auto 1024px auto;
     }
 
-    >div{
+    >div {
 
-        @include md{
+        @include md {
             grid-area: animals;
         }
 
-        h1{
+        h1 {}
 
-        }
+        p {}
 
-        p{
+        ul {
 
-        }
-
-        ul{
-
-            @include sm{
-                display: grid;
-                grid-template-columns: 100%;
-                grid-template-areas: "a1";
-            }
-    
-            @include md{
+            @include md {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-areas: "a1 a1 a2 a2"
-                "a1 a1 a3 a4"
+                    "a1 a1 a3 a4";
             }
 
-            @include lg{
+            @include lg {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-areas: "a1 a1 a2 a2"
-                "a1 a1 a3 a4"
-                "a1 a1 a5 a5";
-                gap: 16px;
-            }
-            
-            @include xl{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-areas: "a1 a1 a2 a2"
-                "a1 a1 a3 a4"
-                "a1 a1 a5 a5";
-                gap: 16px;
-            }
-         
-    
-            li{
-    
-                img{
+                    "a1 a1 a3 a4"
+                    "a1 a1 a5 a5";
+                gap: 20px; }
+
+
+            li {
+
+                img {
                     width: 100%;
                 }
-    
+
             }
         }
     }
 
-            #a1{
-                @include sm{
-                    grid-area: a1;
-                }
-            }
+    #a1 {
+        align-items: flex-end;
+        background-image: url("../img/animals/octopusphoto.jpg");
+        background-position: center;
+        display: flex;
+        justify-content: flex-start;
 
-            #a2{
-                
-                @include md{
-                    grid-area: a2;
-                }
-            }
+        h2 {}
 
-            #a3{
-                @include md{
-                    grid-area: a3;
-                }
-            }
+        p {}
 
-            #a4{
-                @include md{
-                    grid-area: a4;
-                }
-            }
-
-            #a5{
-                @include md{
-                    grid-area: a5;
-                }
-
-            }
+        @include md {
+            grid-area: a1;
         }
+    }
 
+    #a2 {
 
+        @include md {
+            grid-area: a2;
+        }
+    }
+
+    #a3 {
+        @include md {
+            grid-area: a3;
+        }
+    }
+
+    #a4 {
+        @include md {
+            grid-area: a4;
+        }
+    }
+
+    #a5 {
+        @include lg {
+            grid-area: a5;
+        }
+    }
+}

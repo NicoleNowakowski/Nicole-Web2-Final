@@ -15,12 +15,12 @@ footer {
 		gap: 24px;
 
 		@include md {
-			grid-template-areas: "social . hours info";
+			grid-template-areas: "socials . hours info";
 			grid-template-columns: repeat(4, 1fr);
 		}
 
 		@include sm {
-			grid-template-areas: "social info";
+			grid-template-areas: "socials info";
 			grid-template-columns: repeat(2, 1fr);
 		}
 

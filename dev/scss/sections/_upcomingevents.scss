@@ -1,0 +1,52 @@
+#upcomingevents {
+
+    @include md {
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". upcomingevents .";
+    }
+
+    @include lg {
+        grid-template-columns: auto 1024px auto;
+    }
+
+    >div {
+
+        @include md {
+            grid-area: upcomingevents;
+        }
+        h1 {}
+
+div{
+        @include md {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "dates picture";
+            gap: 106px;
+        }
+
+        ul {
+
+        }
+        aside {
+
+        }
+    }
+}
+
+    #dates {
+        @include md {
+            grid-area: dates;
+        }
+    }
+
+    #pic {
+        @include md {
+            grid-area: pic;
+        }
+    }
+
+
+
+
+}
