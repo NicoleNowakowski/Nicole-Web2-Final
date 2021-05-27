@@ -15,9 +15,23 @@
             grid-area: animals;
         }
 
-        h1 {}
+        h1 {
+            font-size: rem-calc(24px);
+            font-weight: 700;
+            padding-top: 40px;
+            margin-bottom: 8px;
+            color: $maastrichtbluedark;
+        }
 
-        p {}
+        p {
+            color: $maastrichtbluedark;
+            font-size: rem-calc(16pt);
+            font-weight: 400;
+        }
+
+        button {
+            margin-bottom: 16px;
+        }
 
         ul {
 
@@ -27,17 +41,33 @@
                 grid-template-areas: "a1 a1 a2 a2"
                     "a1 a1 a3 a4"
                     "a1 a1 a5 a5";
-                gap: 20px; 
+                gap: 24px;
             }
 
 
 
             li {
+                h2 {
+                    font-size: rem-calc(21pt);
+                    font-weight: 700;
+                    color: $white;
+                    margin-left: 10px;
+                    margin-bottom: 8px;
+                }
 
+                p {
+                    display: none;
+                }
+
+                button {
+                    margin-top: 8pt;
+                }
+            }
+
+            li {
                 img {
                     width: 100%;
                 }
-
             }
         }
     }
@@ -49,47 +79,56 @@
         background-size: 100%;
         display: flex;
         justify-content: flex-start;
-        
-
-        h2 {}
-
-        p {}
+        min-height: 317px;
 
         @include md {
             grid-area: a1;
-            min-height: 320px;
+            min-height: 317px;
         }
+
         @include lg {
-            min-height: 540px; 
+            min-height: 540px;
         }
-        @include xl{
+
+        @include xl {
             min-height: 655px;
         }
     }
 
     #a2 {
-
+        display: none;
+        
         @include md {
+            display: grid;
             grid-area: a2;
         }
     }
 
     #a3 {
+
+        display: none; 
         @include md {
+           display: grid;
             grid-area: a3;
         }
     }
 
     #a4 {
+
+        display: none ;
         @include md {
+            display: grid;
             grid-area: a4;
         }
     }
 
     #a5 {
+
+        display: none ;
         @include lg {
+            display: grid;
             grid-area: a5;
         }
-      
+
     }
 }

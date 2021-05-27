@@ -399,6 +399,7 @@ button {
 
 .pink-button {
   background-color: #EA68B0;
+  color: #fff;
   border: none;
   font-size: 1.3125rem;
   font-weight: 600;
@@ -766,12 +767,14 @@ footer > div #social ul li a:visited {
   }
 }
 
+#plan {
+  background-color: #031020;
+}
 @media (min-width: 768px) {
   #plan {
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". plan .";
-    background-color: #031020;
   }
 }
 @media (min-width: 1024px) {
@@ -784,6 +787,13 @@ footer > div #social ul li a:visited {
     grid-area: plan;
   }
 }
+#plan > div h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #EDEFF6;
+  text-align: center;
+  padding-top: 10px;
+}
 @media (min-width: 768px) {
   #plan > div ul {
     display: grid;
@@ -791,6 +801,24 @@ footer > div #social ul li a:visited {
     grid-template-areas: "p1 p2 p2" "p3 p3 p4";
     gap: 16px;
   }
+}
+#plan > div ul li {
+  background-color: #EDEFF6;
+}
+#plan > div ul li ul li h2 {
+  display: none;
+}
+#plan > div ul li ul li div i {
+  color: #061F40;
+}
+#plan > div ul li ul li p {
+  color: #061D58;
+}
+#plan > div ul li h2 {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #061F40;
 }
 @media (min-width: 768px) {
   #plan #information {
@@ -830,13 +858,41 @@ footer > div #social ul li a:visited {
     grid-area: animals;
   }
 }
+#animals > div h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-top: 40px;
+  margin-bottom: 8px;
+  color: #031020;
+}
+#animals > div p {
+  color: #031020;
+  font-size: 1rem;
+  font-weight: 400;
+}
+#animals > div button {
+  margin-bottom: 16px;
+}
 @media (min-width: 768px) {
   #animals > div ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a1 a1 a2 a2" "a1 a1 a3 a4" "a1 a1 a5 a5";
-    gap: 20px;
+    gap: 24px;
   }
+}
+#animals > div ul li h2 {
+  font-size: 1.3125rem;
+  font-weight: 700;
+  color: #fff;
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+#animals > div ul li p {
+  display: none;
+}
+#animals > div ul li button {
+  margin-top: 8pt;
 }
 #animals > div ul li img {
   width: 100%;
@@ -848,11 +904,12 @@ footer > div #social ul li a:visited {
   background-size: 100%;
   display: flex;
   justify-content: flex-start;
+  min-height: 317px;
 }
 @media (min-width: 768px) {
   #animals #a1 {
     grid-area: a1;
-    min-height: 320px;
+    min-height: 317px;
   }
 }
 @media (min-width: 1024px) {
@@ -865,23 +922,39 @@ footer > div #social ul li a:visited {
     min-height: 655px;
   }
 }
+#animals #a2 {
+  display: none;
+}
 @media (min-width: 768px) {
   #animals #a2 {
+    display: grid;
     grid-area: a2;
   }
 }
+#animals #a3 {
+  display: none;
+}
 @media (min-width: 768px) {
   #animals #a3 {
+    display: grid;
     grid-area: a3;
   }
 }
+#animals #a4 {
+  display: none;
+}
 @media (min-width: 768px) {
   #animals #a4 {
+    display: grid;
     grid-area: a4;
   }
 }
+#animals #a5 {
+  display: none;
+}
 @media (min-width: 1024px) {
   #animals #a5 {
+    display: grid;
     grid-area: a5;
   }
 }
