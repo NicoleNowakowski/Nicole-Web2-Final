@@ -1,87 +1,132 @@
 /* =============
     Header
 ============= */
-header{
-    display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". header .";
+header {
+	display: grid;
+	grid-template-columns: 16px auto 16px;
+	grid-template-areas: ". header .";
 	background-color: $maastrichtbluedark;
 
 
-    >div{
+	>div {
 		grid-area: header;
 		display: grid;
 		grid-template-areas:
-				"logo . . social"
-				"logo . . search";
-			grid-template-columns: repeat(4fr);
-	
+			"logo . . social"
+			"logo . . search";
+		grid-template-columns: repeat(4, 1fr);
+
 	}
 
-		#logo {
-			grid-area:logo;
-            width: 80px;
+	#logo {
+		grid-area: logo;
 
-        img {
-            @include md {
-                width: 367px;
-            }
 
-            @include lg {
-                width: 395px;
-            }
+		img {
+			width: 300px;
 
-			@include xl{ 
+			@include md {
+				width: 367px;
+			}
+
+			@include lg {
+				width: 395px;
+			}
+
+			@include xl {
 				width: 537px;
-        }
-    }
-}
-
-
-#social {
-		grid-area:social;
-
-	ul {
-		border: none;
-		display: flex;
-		
-		li {
-		
-		}
-	}
-}
-
-
-#search{
-	@include md {
-		grid-area: search;
-	}
-
-	form {
-		input {
-
-			&::placeholder {
-				/* Chrome, Firefox, Opera, Safari 10.1+ */
-	
-				/* Firefox */
-				opacity: 1;
-			}
-
-			&:-ms-input-placeholder {
-				/* Internet Explorer 10-11 */
-				
-			}
-
-			&::-ms-input-placeholder {
-				/* Microsoft Edge */
-				
 			}
 		}
+	}
 
-		button {
+
+	#social {
+		@include md {
+			grid-area: social;
+		}
+
+		ul {
+			border: none;
 			display: flex;
-			
+
+			@include lg {
+				justify-content: flex-end;
+			}
+
+
+			li {
+				margin-right: 16px;
+
+				@include lg {
+					margin-left: 16px;
+					margin-right: 0px;
+				}
+
+				a:link,
+				a:visited {
+					color: $white;
+					font-size: rem-calc(30);
+
+					&:hover,
+					&:active {
+						color: $black;
+					}
+				}
+			}
 		}
 	}
-}
+
+
+	#search {
+		@include md {
+			grid-area: search;
+		}
+
+		form {
+			input {
+				background-color: $white;
+				border: none;
+				color: $maastrichtbluedark;
+				padding: 16px 2%;
+				width: 96%;
+
+
+				&::placeholder {
+					/* Chrome, Firefox, Opera, Safari 10.1+ */
+					color: $maastrichtbluedark;
+					/* Firefox */
+					opacity: 1;
+				}
+
+				&:-ms-input-placeholder {
+					/* Internet Explorer 10-11 */
+					color: $maastrichtbluedark;
+				}
+
+				&::-ms-input-placeholder {
+					/* Microsoft Edge */
+					color: $maastrichtbluedark;
+				}
+
+				include md {
+					width: 175px;
+				}
+
+				@include lg {
+					width: 235px;
+				}
+
+				@include xl {
+					width: 355px;
+				}
+
+				button {
+					display: flex;
+					margin-left: auto;
+					margin-top: 16px;
+				}
+
+			}
+		}
+	}
 }

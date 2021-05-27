@@ -16,14 +16,28 @@
     @include xl {
         min-height: 770px ;
     }
+    
+div{
+    padding-bottom: 40px ;
+    padding-left: 10px;
+}
 
 
-
-    #text{
+ #text{
+      
 h1{
+    color: $bluetoruslight;
+    font-size: rem-calc(28) ;
+    font-weight: 700;
+    margin-bottom: 8px;
+
 
 }
 p {
+    color: $bluetoruslight;
+    font-size: rem-calc(16) ;
+    font-weight: 400;
+    margin-bottom: 16px;
 
 }
 

@@ -15,7 +15,10 @@
         @include md {
             grid-area: dailyschedule;
         }
-        h1 {}
+        h1 {
+            text-align: center;
+
+        }
 
 div{
         @include md {
@@ -24,13 +27,26 @@ div{
             grid-template-areas: "pic times";
             gap: 106px;
         }
+        aside{
+            img{
+                padding-left: 72px ;
+            }
+            
+            h2{
+                text-align: center;
+            }
+        }
 
         ul {
+            li{
+                h2{text-align: left;}
+                h3{padding-left: 87px ;}
+                h4{padding-left: 87px ;}
+                button{margin-left: 87px ;}
+            }
 
         }
-        aside {
-
-        }
+       
     }
 }
 

@@ -382,22 +382,12 @@ ul li {
 /* =============
     Typography
 ============= */
-body {
-  font-family: "Open Sans", sans-serif;
+h1, h2 {
+  font-family: "Ubuntu", sans-serif;
 }
 
-h1, h2, h3, h4 {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.section-title {
-  font-weight: 300;
+p, h3, h4, button, input {
+  font-family: "Lato", sans-serif;
 }
 
 /* =============
@@ -459,11 +449,13 @@ header > div {
   grid-area: header;
   display: grid;
   grid-template-areas: "logo . . social" "logo . . search";
-  grid-template-columns: repeat(4fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 header #logo {
   grid-area: logo;
-  width: 80px;
+}
+header #logo img {
+  width: 300px;
 }
 @media (min-width: 768px) {
   header #logo img {
@@ -480,31 +472,82 @@ header #logo {
     width: 537px;
   }
 }
-header #social {
-  grid-area: social;
+@media (min-width: 768px) {
+  header #social {
+    grid-area: social;
+  }
 }
 header #social ul {
   border: none;
   display: flex;
+}
+@media (min-width: 1024px) {
+  header #social ul {
+    justify-content: flex-end;
+  }
+}
+header #social ul li {
+  margin-right: 16px;
+}
+@media (min-width: 1024px) {
+  header #social ul li {
+    margin-left: 16px;
+    margin-right: 0px;
+  }
+}
+header #social ul li a:link,
+header #social ul li a:visited {
+  color: #fff;
+  font-size: 1.875rem;
+}
+header #social ul li a:link:hover, header #social ul li a:link:active,
+header #social ul li a:visited:hover,
+header #social ul li a:visited:active {
+  color: #000;
 }
 @media (min-width: 768px) {
   header #search {
     grid-area: search;
   }
 }
+header #search form input {
+  background-color: #fff;
+  border: none;
+  color: #031020;
+  padding: 16px 2%;
+  width: 96%;
+}
 header #search form input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #031020;
   /* Firefox */
   opacity: 1;
 }
 header #search form input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
+  color: #031020;
 }
 header #search form input::-ms-input-placeholder {
   /* Microsoft Edge */
+  color: #031020;
 }
-header #search form button {
+header #search form input include md {
+  width: 175px;
+}
+@media (min-width: 1024px) {
+  header #search form input {
+    width: 235px;
+  }
+}
+@media (min-width: 1200px) {
+  header #search form input {
+    width: 355px;
+  }
+}
+header #search form input button {
   display: flex;
+  margin-left: auto;
+  margin-top: 16px;
 }
 
 /* =============
@@ -518,6 +561,7 @@ footer {
     display: grid;
     grid-template-areas: ". footer .";
     grid-template-columns: auto 1200px auto;
+    background-color: #031020;
   }
 }
 footer > div {
@@ -612,6 +656,23 @@ footer > div #social ul li a:visited {
     min-height: 770px;
   }
 }
+#hero div {
+  padding-bottom: 40px;
+  padding-left: 10px;
+}
+#hero #text h1 {
+  color: #EDEFF6;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+#hero #text p {
+  color: #EDEFF6;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
 @media (min-width: 768px) {
   #dailyschedule {
     display: grid;
@@ -629,6 +690,9 @@ footer > div #social ul li a:visited {
     grid-area: dailyschedule;
   }
 }
+#dailyschedule > div h1 {
+  text-align: center;
+}
 @media (min-width: 768px) {
   #dailyschedule > div div {
     display: grid;
@@ -636,6 +700,24 @@ footer > div #social ul li a:visited {
     grid-template-areas: "pic times";
     gap: 106px;
   }
+}
+#dailyschedule > div div aside img {
+  padding-left: 72px;
+}
+#dailyschedule > div div aside h2 {
+  text-align: center;
+}
+#dailyschedule > div div ul li h2 {
+  text-align: left;
+}
+#dailyschedule > div div ul li h3 {
+  padding-left: 87px;
+}
+#dailyschedule > div div ul li h4 {
+  padding-left: 87px;
+}
+#dailyschedule > div div ul li button {
+  margin-left: 87px;
 }
 @media (min-width: 768px) {
   #dailyschedule #times {
@@ -689,6 +771,7 @@ footer > div #social ul li a:visited {
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". plan .";
+    background-color: #031020;
   }
 }
 @media (min-width: 1024px) {

@@ -122,6 +122,19 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/deploy\/img\/header\/Logo.png" : {
+      "ft" : 32768,
+      "iS" : 32364,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/header\/Logo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/img\/header\/Logo.svg" : {
       "ft" : 2097152,
       "miP" : 0,

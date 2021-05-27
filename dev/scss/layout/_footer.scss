@@ -8,6 +8,7 @@ footer {
 		display: grid;
 		grid-template-areas: ". footer .";
 		grid-template-columns: auto 1200px auto;
+		background-color: $maastrichtbluedark;
 	}
 
 	>div {
