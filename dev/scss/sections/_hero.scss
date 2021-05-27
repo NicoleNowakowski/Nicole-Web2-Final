@@ -2,10 +2,23 @@
     align-items: flex-end;
     background-image: url("../img/hero/herophoto.jpg");
     background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: flex-start;
+   min-height: 250px ;
 
-    
+    @include md {
+        min-height: 400px ;
+    }
+    @include lg {
+       min-height: 550px; ;
+    }
+    @include xl {
+        min-height: 770px ;
+    }
+
+
+
     #text{
 h1{
 

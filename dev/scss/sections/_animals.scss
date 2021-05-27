@@ -25,16 +25,11 @@
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-areas: "a1 a1 a2 a2"
-                    "a1 a1 a3 a4";
-            }
-
-            @include lg {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-areas: "a1 a1 a2 a2"
                     "a1 a1 a3 a4"
                     "a1 a1 a5 a5";
-                gap: 20px; }
+                gap: 20px; 
+            }
+
 
 
             li {
@@ -51,8 +46,10 @@
         align-items: flex-end;
         background-image: url("../img/animals/octopusphoto.jpg");
         background-position: center;
+        background-size: 100%;
         display: flex;
         justify-content: flex-start;
+        
 
         h2 {}
 
@@ -60,6 +57,13 @@
 
         @include md {
             grid-area: a1;
+            min-height: 320px;
+        }
+        @include lg {
+            min-height: 540px; 
+        }
+        @include xl{
+            min-height: 655px;
         }
     }
 
@@ -86,5 +90,6 @@
         @include lg {
             grid-area: a5;
         }
+      
     }
 }
