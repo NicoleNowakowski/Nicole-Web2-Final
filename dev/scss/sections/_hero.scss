@@ -5,7 +5,7 @@
     background-size: cover;
     display: flex;
     justify-content: flex-start;
-   min-height: 250px ;
+    min-height: 250px ;
 
     @include md {
         min-height: 400px ;

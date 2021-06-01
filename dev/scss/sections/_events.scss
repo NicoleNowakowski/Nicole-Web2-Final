@@ -1,12 +1,22 @@
 #events {
+    padding-top: 40px;
+    padding-bottom: 40px;
     @include md {
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". events .";
+        padding-top:56px;
+        padding-bottom:56px;
     }
 
     @include lg {
         grid-template-columns: auto 1024px auto;
+        padding-top:80px;
+        padding-bottom: 80px;
+    }
+    @include xl{
+        padding-top:96px;
+        padding-bottom: 96px ;
     }
 
     >div {
@@ -19,12 +29,14 @@
             font-size: rem-calc(24);
             color: $maastrichtbluedark;
             text-align: center;
-            padding-top: 40px;
             padding-bottom: 16px;
         }
 
 
         ul {
+            display: grid;
+            gap: 20px;
+            
             @include md {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -35,7 +47,7 @@
 
             li {
                 background-color: $bluetoruslight ;
-
+                
                 span {
                     font-weight: 700;
                     font-size: rem-calc(18);

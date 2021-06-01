@@ -1,12 +1,18 @@
 #animals {
+    padding-top: 40px;
     @include md {
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". animals .";
+        padding-top: 56px ;
     }
 
     @include lg {
         grid-template-columns: auto 1024px auto;
+        padding-top: 80px;
+    }
+    @include xl{
+        padding-top: 96px;
     }
 
     >div {
@@ -18,7 +24,6 @@
         h1 {
             font-size: rem-calc(24px);
             font-weight: 700;
-            padding-top: 40px;
             margin-bottom: 8px;
             color: $maastrichtbluedark;
         }
@@ -60,7 +65,7 @@
                 }
 
                 button {
-                    margin-top: 8pt;
+                    margin-top: 0pt;
                     margin-left: 18pt;
                 }
             }
@@ -82,16 +87,29 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
-    
+
         min-height: 317px;
 
+
         @include md {
+
             grid-area: a1;
             min-height: 317px;
         }
 
         @include lg {
             min-height: 540px;
+
+            h2 {
+                font-size: rem-calc(24);
+            }
+
+            p {
+                display: grid;
+                padding-left: 18px;
+                color: $bluetoruslight;
+                font-size: rem-calc(18);
+            }
         }
 
         @include xl {
@@ -101,7 +119,7 @@
 
     #a2 {
         display: none;
-        
+
         @include md {
             display: grid;
             grid-area: a2;
@@ -110,16 +128,18 @@
 
     #a3 {
 
-        display: none; 
+        display: none;
+
         @include md {
-           display: grid;
+            display: grid;
             grid-area: a3;
         }
     }
 
     #a4 {
 
-        display: none ;
+        display: none;
+
         @include md {
             display: grid;
             grid-area: a4;
@@ -128,7 +148,8 @@
 
     #a5 {
 
-        display: none ;
+        display: none;
+
         @include lg {
             display: grid;
             grid-area: a5;

@@ -386,7 +386,7 @@ h1, h2 {
   font-family: "Ubuntu", sans-serif;
 }
 
-p, h3, h4, button, input, span {
+p, h3, h4, h5, button, input, span, a, address {
   font-family: "Lato", sans-serif;
 }
 
@@ -452,6 +452,17 @@ header > div {
   grid-template-areas: "logo . . social" "logo . . search";
   grid-template-columns: repeat(4, 1fr);
 }
+header > div ul {
+  display: flex;
+  justify-content: flex-end;
+}
+header > div ul li {
+  padding: 5px;
+  font-size: 18px;
+}
+header > div ul li a {
+  color: white;
+}
 header #logo {
   grid-area: logo;
 }
@@ -481,11 +492,6 @@ header #logo img {
 header #social ul {
   border: none;
   display: flex;
-}
-@media (min-width: 1024px) {
-  header #social ul {
-    justify-content: flex-end;
-  }
 }
 header #social ul li {
   margin-right: 16px;
@@ -532,8 +538,10 @@ header #search form input::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #031020;
 }
-header #search form input include md {
-  width: 175px;
+@media (min-width: 768px) {
+  header #search form input {
+    width: 175px;
+  }
 }
 @media (min-width: 1024px) {
   header #search form input {
@@ -556,6 +564,7 @@ header #search form input button {
 ============= */
 footer {
   padding: 16px;
+  background-color: #031020;
 }
 @media (min-width: 1200px) {
   footer {
@@ -567,12 +576,8 @@ footer {
 footer > div {
   display: grid;
   gap: 24px;
-}
-@media (min-width: 576px) {
-  footer > div {
-    grid-template-areas: "socials info";
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-areas: "socials info";
+  grid-template-columns: repeat(2, 1fr);
 }
 @media (min-width: 768px) {
   footer > div {
@@ -594,13 +599,51 @@ footer > div section div ul {
 footer > div section div ul li {
   padding: 5px;
 }
+footer > div section div ul li a {
+  color: white;
+}
+footer > div section p {
+  color: #EDEFF6;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  footer > div section p {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 1024px) {
+  footer > div section p {
+    font-size: 1rem;
+  }
+}
 @media (min-width: 768px) {
   footer > div #info {
     grid-area: info;
   }
 }
+footer > div #info ul li i {
+  color: #C1C0E1;
+  font-size: 31px;
+  text-align: center;
+}
+footer > div #info ul li address {
+  color: #EDEFF6;
+  font-size: 1rem;
+  font-weight: 400;
+}
+footer > div #info ul li a {
+  color: #EDEFF6;
+  font-size: 1rem;
+  font-weight: 400;
+}
 footer > div #hours {
   display: none;
+}
+footer > div #hours h5 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #EDEFF6;
 }
 @media (min-width: 768px) {
   footer > div #hours {
@@ -609,36 +652,36 @@ footer > div #hours {
   }
 }
 @media (min-width: 768px) {
-  footer > div #social {
+  footer > div #socials {
     grid-area: social;
     margin-top: -100px;
   }
 }
 @media (min-width: 1024px) {
-  footer > div #social {
+  footer > div #socials {
     margin-top: 0px;
   }
 }
-footer > div #social ul {
+footer > div #socials ul {
   border: none;
   display: flex;
 }
 @media (min-width: 1024px) {
-  footer > div #social ul {
+  footer > div #socials ul {
     justify-content: flex-end;
   }
 }
-footer > div #social ul li {
+footer > div #socials ul li {
   margin-right: 16px;
 }
 @media (min-width: 1024px) {
-  footer > div #social ul li {
+  footer > div #socials ul li {
     margin-left: 16px;
     margin-right: 0px;
   }
 }
-footer > div #social ul li a:link,
-footer > div #social ul li a:visited {
+footer > div #socials ul li a:link,
+footer > div #socials ul li a:visited {
   color: #fff;
   font-size: 1.875rem;
 }
@@ -683,16 +726,26 @@ footer > div #social ul li a:visited {
   margin-bottom: 16px;
 }
 
+#dailyschedule {
+  padding-top: 40px;
+}
 @media (min-width: 768px) {
   #dailyschedule {
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". dailyschedule .";
+    padding-top: 56px;
   }
 }
 @media (min-width: 1024px) {
   #dailyschedule {
     grid-template-columns: auto 1024px auto;
+    padding-top: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  #dailyschedule {
+    padding-top: 96px;
   }
 }
 @media (min-width: 768px) {
@@ -740,16 +793,30 @@ footer > div #social ul li a:visited {
   }
 }
 
+#upcomingevents {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 @media (min-width: 768px) {
   #upcomingevents {
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". upcomingevents .";
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 }
 @media (min-width: 1024px) {
   #upcomingevents {
     grid-template-columns: auto 1024px auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  #upcomingevents {
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 }
 @media (min-width: 768px) {
@@ -791,6 +858,9 @@ footer > div #social ul li a:visited {
     grid-template-columns: auto 1024px auto;
   }
 }
+#plan > div {
+  padding-bottom: 24px;
+}
 @media (min-width: 768px) {
   #plan > div {
     grid-area: plan;
@@ -808,7 +878,7 @@ footer > div #social ul li a:visited {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "p1 p2 p2" "p3 p3 p4";
-    gap: 16px;
+    gap: 24px;
   }
 }
 #plan > div ul li {
@@ -838,6 +908,19 @@ footer > div #social ul li a:visited {
   margin-bottom: 18pt;
   margin-left: 10pt;
 }
+#plan #information ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 5px;
+}
+#plan #information ul i {
+  font-size: 31px;
+  margin-bottom: 5px;
+}
+#plan #information ul a {
+  color: #EA68B0;
+}
 @media (min-width: 768px) {
   #plan #information {
     grid-area: p1;
@@ -857,18 +940,31 @@ footer > div #social ul li a:visited {
   #plan #tickets {
     grid-area: p4;
   }
+  #plan #tickets p {
+    text-align: center;
+  }
 }
 
+#animals {
+  padding-top: 40px;
+}
 @media (min-width: 768px) {
   #animals {
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". animals .";
+    padding-top: 56px;
   }
 }
 @media (min-width: 1024px) {
   #animals {
     grid-template-columns: auto 1024px auto;
+    padding-top: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  #animals {
+    padding-top: 96px;
   }
 }
 @media (min-width: 768px) {
@@ -879,7 +975,6 @@ footer > div #social ul li a:visited {
 #animals > div h1 {
   font-size: 1.5rem;
   font-weight: 700;
-  padding-top: 40px;
   margin-bottom: 8px;
   color: #031020;
 }
@@ -910,7 +1005,7 @@ footer > div #social ul li a:visited {
   display: none;
 }
 #animals > div ul li button {
-  margin-top: 8pt;
+  margin-top: 0pt;
   margin-left: 18pt;
 }
 #animals > div ul li img {
@@ -936,6 +1031,15 @@ footer > div #social ul li a:visited {
 @media (min-width: 1024px) {
   #animals #a1 {
     min-height: 540px;
+  }
+  #animals #a1 h2 {
+    font-size: 1.5rem;
+  }
+  #animals #a1 p {
+    display: grid;
+    padding-left: 18px;
+    color: #EDEFF6;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 1200px) {
@@ -980,16 +1084,30 @@ footer > div #social ul li a:visited {
   }
 }
 
+#events {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 @media (min-width: 768px) {
   #events {
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". events .";
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 }
 @media (min-width: 1024px) {
   #events {
     grid-template-columns: auto 1024px auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  #events {
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 }
 @media (min-width: 768px) {
@@ -1002,8 +1120,11 @@ footer > div #social ul li a:visited {
   font-size: 1.5rem;
   color: #031020;
   text-align: center;
-  padding-top: 40px;
   padding-bottom: 16px;
+}
+#events > div ul {
+  display: grid;
+  gap: 20px;
 }
 @media (min-width: 768px) {
   #events > div ul {

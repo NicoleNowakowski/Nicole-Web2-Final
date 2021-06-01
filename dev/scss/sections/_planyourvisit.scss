@@ -13,6 +13,7 @@
     }
 
     >div {
+        padding-bottom: 24px;
 
         @include md {
             grid-area: plan;
@@ -23,7 +24,7 @@
             font-size: rem-calc(24);
             color: $bluetoruslight;
             text-align: center;
-            padding-top: 10px ;
+            padding-top: 10px;
         }
 
 
@@ -35,7 +36,7 @@
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-areas: "p1 p2 p2"
                     "p3 p3 p4";
-                gap: 16px;
+                gap: 24px;
             }
 
 
@@ -67,8 +68,8 @@
                     font-size: rem-calc(18pt);
                     font-weight: 700;
                     color: $maastrichtblue;
-                    padding-top: 18pt ;
-                    padding-left:10pt ;
+                    padding-top: 18pt;
+                    padding-left: 10pt;
                 }
 
                 p {
@@ -76,8 +77,8 @@
                 }
 
                 button {
-                 margin-bottom: 18pt ;
-                 margin-left: 10pt ;
+                    margin-bottom: 18pt;
+                    margin-left: 10pt;
                 }
 
 
@@ -86,9 +87,26 @@
         }
     }
 
-    #information {
+    #information {  
+        ul {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding-top: 5px;
+                
+                i{
+                    font-size: 31px;
+                    margin-bottom: 5px;
+                }
+                a{
+                    color: $berryblast;
+                }
+            }
         @include md {
             grid-area: p1;
+
+          
+
         }
     }
 
@@ -107,6 +125,11 @@
     #tickets {
         @include md {
             grid-area: p4;
-        }
+            p{
+                text-align: center;
+            }
+          
+        
     }
+}
 }

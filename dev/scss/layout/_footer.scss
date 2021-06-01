@@ -3,6 +3,7 @@
 ============= */
 footer {
 	padding: 16px;
+	background-color: $maastrichtbluedark;
 
 	@include xl {
 		display: grid;
@@ -14,11 +15,9 @@ footer {
 	>div {
 		display: grid;
 		gap: 24px;
-
-		@include sm {
 			grid-template-areas: "socials info";
 			grid-template-columns: repeat(2, 1fr);
-		}
+		
 
 		@include md {
 			grid-template-areas: "socials . hours info";
@@ -29,7 +28,7 @@ footer {
 			grid-area: footer;
 		}
 
-		section {
+	section {
 			padding-top: 16px;
 
 			div {
@@ -38,24 +37,67 @@ footer {
 
 					li {
 						padding: 5px;
+					a{
+						color: white;
+					}	
 					}
 
 				}
 
 			}
-
-
+			p{
+				color: $bluetoruslight  ;
+				font-size: rem-calc(12);
+				font-weight: 400;
+				
+					@include md{
+						font-size: rem-calc(14);
+					}
+					@include lg{
+						font-size: rem-calc(16) ;
+					}
+					@include xl
+				
+			}
 		}
+			
+
+		
 
 		#info {
+			
 			@include md {
 				grid-area: info;
+			}
+			ul{
+				li{
+						i{
+							color: $bluetrustlight ;
+							font-size: 31px;
+							text-align: center;
+						}
+					address{ color: $bluetoruslight;
+					font-size: rem-calc(16)  ;
+					font-weight: 400;}
+				}
+				li{
+					a{
+						color: $bluetoruslight;
+						font-size: rem-calc(16)  ;
+						font-weight: 400;
+					}
+				}
 			}
 
 		}
 
 		#hours {
 			display: none;
+			h5{
+				font-weight: 700 ;
+				font-size: rem-calc(16) ;
+				color: $bluetoruslight ;
+			}
 
 			@include md {
 				display: grid;
@@ -63,7 +105,7 @@ footer {
 			}
 		}
 
-		#social {
+		#socials {
 			@include md {
 				grid-area: social;
 				margin-top: -100px;
@@ -98,6 +140,7 @@ footer {
 						&:active {}
 					}
 				}
+				
 			}
 		}
 	}

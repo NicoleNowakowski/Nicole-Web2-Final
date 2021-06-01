@@ -15,7 +15,17 @@ header {
 			"logo . . social"
 			"logo . . search";
 		grid-template-columns: repeat(4, 1fr);
+ul{
+	display: flex;
+	justify-content: flex-end;
+	li{
+		padding: 5px;
+		font-size: 18px ;
+		a{color: white;
+	}
+}
 
+}
 	}
 
 	#logo {
@@ -49,9 +59,7 @@ header {
 			border: none;
 			display: flex;
 
-			@include lg {
-				justify-content: flex-end;
-			}
+			
 
 
 			li {
@@ -108,7 +116,7 @@ header {
 					color: $maastrichtbluedark;
 				}
 
-				include md {
+				@include md {
 					width: 175px;
 				}
 
@@ -121,6 +129,7 @@ header {
 				}
 
 				button {
+				
 					display: flex;
 					margin-left: auto;
 					margin-top: 16px;

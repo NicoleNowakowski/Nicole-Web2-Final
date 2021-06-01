@@ -1,13 +1,18 @@
 #dailyschedule {
-
+padding-top: 40px;
     @include md {
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". dailyschedule .";
+        padding-top: 56px ;
     }
 
     @include lg {
         grid-template-columns: auto 1024px auto;
+        padding-top: 80px;
+    }
+    @include xl{
+        padding-top: 96px;
     }
 
     >div {
