@@ -8,21 +8,21 @@ footer {
 		display: grid;
 		grid-template-areas: ". footer .";
 		grid-template-columns: auto 1200px auto;
-		background-color: $maastrichtbluedark;
+
 	}
 
 	>div {
 		display: grid;
 		gap: 24px;
 
-		@include md {
-			grid-template-areas: "socials . hours info";
-			grid-template-columns: repeat(4, 1fr);
-		}
-
 		@include sm {
 			grid-template-areas: "socials info";
 			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include md {
+			grid-template-areas: "socials . hours info";
+			grid-template-columns: repeat(4, 1fr);
 		}
 
 		@include xl {
@@ -31,6 +31,20 @@ footer {
 
 		section {
 			padding-top: 16px;
+
+			div {
+				ul {
+					display: flex;
+
+					li {
+						padding: 5px;
+					}
+
+				}
+
+			}
+
+
 		}
 
 		#info {
@@ -41,8 +55,10 @@ footer {
 		}
 
 		#hours {
-			
+			display: none;
+
 			@include md {
+				display: grid;
 				grid-area: hours;
 			}
 		}
@@ -79,9 +95,7 @@ footer {
 						font-size: rem-calc(30);
 
 						&:hover,
-						&:active {
-							
-						}
+						&:active {}
 					}
 				}
 			}

@@ -1,56 +1,101 @@
-#events{
-    @include md{
-    display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". events .";
+#events {
+    @include md {
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". events .";
     }
 
-    @include lg{
+    @include lg {
         grid-template-columns: auto 1024px auto;
     }
 
-    >div{
-@include md {
-        grid-area: events;
-}
-
-ul {
-    @include sm{
-        display: grid;
-    grid-template-columns: 100%;
-        grid-template-areas: "bday"
-        "weddings"
-        "socialevents" 
-        "corporate";}
-
-        @include md{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-areas: "bday weddings"
-            "socialevents corporate" ;
+    >div {
+        @include md {
+            grid-area: events;
         }
-    }
-        
 
-#bday{
-    @include md {
-    grid-area: bday;
-}
-}
-#weddings{
-    @include md {
-    grid-area: weddings;
-}
-}
-#social{ @include md {
-    grid-area: social;
-}
-}
-#corporate{
-    @include md {
-    grid-area: corporate ;
-}
-}
+        h1 {
+            font-weight: 700;
+            font-size: rem-calc(24);
+            color: $maastrichtbluedark;
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 16px;
+        }
+
+
+        ul {
+            @include md {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: "bday weddings"
+                    "socialevents corporate";
+                gap: 20px;
+            }
+
+            li {
+                background-color: $bluetoruslight ;
+
+                span {
+                    font-weight: 700;
+                    font-size: rem-calc(18);
+                    color: $maastrichtblue;
+                   padding-left: 10px;
+
+                }
+
+                i {
+                    font-size: 16px;
+                   padding-left: 5pt;
+                   padding-top: 24px;
+                   
+                }
+
+                img {
+                    padding-top: 24px;
+                    height: 16px;
+                    padding-left: 5pt;
+                }
+
+                P {
+                    font-size: rem-calc(16);
+                    font-weight: 400;
+                    color: $maastrichtblue;
+                    padding-left: 10px;
+                }
+                button{
+                margin-left: 10px;
+                margin-bottom: 20px;
+                }
+            }
+
+
+        }
+
+
+        #bday {
+            @include md {
+                grid-area: bday;
+            }
+        }
+
+        #weddings {
+            @include md {
+                grid-area: weddings;
+            }
+        }
+
+        #social {
+            @include md {
+                grid-area: social;
+            }
+        }
+
+        #corporate {
+            @include md {
+                grid-area: corporate;
+            }
+        }
 
     }
 }

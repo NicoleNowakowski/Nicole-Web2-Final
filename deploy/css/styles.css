@@ -386,7 +386,7 @@ h1, h2 {
   font-family: "Ubuntu", sans-serif;
 }
 
-p, h3, h4, button, input {
+p, h3, h4, button, input, span {
   font-family: "Lato", sans-serif;
 }
 
@@ -562,23 +562,22 @@ footer {
     display: grid;
     grid-template-areas: ". footer .";
     grid-template-columns: auto 1200px auto;
-    background-color: #031020;
   }
 }
 footer > div {
   display: grid;
   gap: 24px;
 }
-@media (min-width: 768px) {
-  footer > div {
-    grid-template-areas: "socials . hours info";
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 @media (min-width: 576px) {
   footer > div {
     grid-template-areas: "socials info";
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  footer > div {
+    grid-template-areas: "socials . hours info";
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 1200px) {
@@ -589,13 +588,23 @@ footer > div {
 footer > div section {
   padding-top: 16px;
 }
+footer > div section div ul {
+  display: flex;
+}
+footer > div section div ul li {
+  padding: 5px;
+}
 @media (min-width: 768px) {
   footer > div #info {
     grid-area: info;
   }
 }
+footer > div #hours {
+  display: none;
+}
 @media (min-width: 768px) {
   footer > div #hours {
+    display: grid;
     grid-area: hours;
   }
 }
@@ -819,6 +828,15 @@ footer > div #social ul li a:visited {
   font-size: 1.125rem;
   font-weight: 700;
   color: #061F40;
+  padding-top: 18pt;
+  padding-left: 10pt;
+}
+#plan > div ul li p {
+  padding-left: 10pt;
+}
+#plan > div ul li button {
+  margin-bottom: 18pt;
+  margin-left: 10pt;
 }
 @media (min-width: 768px) {
   #plan #information {
@@ -885,7 +903,7 @@ footer > div #social ul li a:visited {
   font-size: 1.3125rem;
   font-weight: 700;
   color: #fff;
-  margin-left: 10px;
+  margin-left: 18px;
   margin-bottom: 8px;
 }
 #animals > div ul li p {
@@ -893,6 +911,7 @@ footer > div #social ul li a:visited {
 }
 #animals > div ul li button {
   margin-top: 8pt;
+  margin-left: 18pt;
 }
 #animals > div ul li img {
   width: 100%;
@@ -903,7 +922,9 @@ footer > div #social ul li a:visited {
   background-position: center;
   background-size: 100%;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   min-height: 317px;
 }
 @media (min-width: 768px) {
@@ -976,19 +997,50 @@ footer > div #social ul li a:visited {
     grid-area: events;
   }
 }
-@media (min-width: 576px) {
-  #events > div ul {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: "bday" "weddings" "socialevents" "corporate";
-  }
+#events > div h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #031020;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 16px;
 }
 @media (min-width: 768px) {
   #events > div ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "bday weddings" "socialevents corporate";
+    gap: 20px;
   }
+}
+#events > div ul li {
+  background-color: #EDEFF6;
+}
+#events > div ul li span {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #061F40;
+  padding-left: 10px;
+}
+#events > div ul li i {
+  font-size: 16px;
+  padding-left: 5pt;
+  padding-top: 24px;
+}
+#events > div ul li img {
+  padding-top: 24px;
+  height: 16px;
+  padding-left: 5pt;
+}
+#events > div ul li P {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #061F40;
+  padding-left: 10px;
+}
+#events > div ul li button {
+  margin-left: 10px;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   #events > div #bday {
