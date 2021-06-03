@@ -732,7 +732,7 @@ footer > div #socials ul li a:visited {
 @media (min-width: 768px) {
   #dailyschedule {
     display: grid;
-    grid-template-columns: 16px auto 16px;
+    grid-template-columns: 10px auto 10px;
     grid-template-areas: ". dailyschedule .";
     padding-top: 56px;
   }
@@ -756,12 +756,15 @@ footer > div #socials ul li a:visited {
 #dailyschedule > div h1 {
   text-align: center;
 }
+#dailyschedule > div div {
+  display: grid;
+  grid-template-columns: 88px auto;
+  grid-template-areas: "pic pic" "times dailyevents";
+}
 @media (min-width: 768px) {
   #dailyschedule > div div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "pic times";
-    gap: 106px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "pic times dailyevents";
   }
 }
 #dailyschedule > div div aside img {
@@ -771,26 +774,31 @@ footer > div #socials ul li a:visited {
   text-align: center;
 }
 #dailyschedule > div div ul li h2 {
-  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #061F40;
+  text-align: right;
+  padding-right: 15px;
+  margin-bottom: 118px;
 }
 #dailyschedule > div div ul li h3 {
-  padding-left: 87px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #061D58;
 }
 #dailyschedule > div div ul li h4 {
-  padding-left: 87px;
+  font-style: italic;
+  font-size: 1rem;
+  color: #061D58;
 }
-#dailyschedule > div div ul li button {
-  margin-left: 87px;
+#dailyschedule #pic {
+  grid-area: pic;
 }
-@media (min-width: 768px) {
-  #dailyschedule #times {
-    grid-area: times;
-  }
+#dailyschedule #times {
+  grid-area: times;
 }
-@media (min-width: 768px) {
-  #dailyschedule #pic {
-    grid-area: pic;
-  }
+#dailyschedule #dailyevents {
+  grid-area: dailyevents;
 }
 
 #upcomingevents {

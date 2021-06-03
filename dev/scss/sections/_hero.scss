@@ -1,45 +1,49 @@
-#hero{
+#hero {
     align-items: flex-end;
     background-image: url("../img/hero/herophoto.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: flex-start;
-    min-height: 250px ;
+    min-height: 250px;
 
     @include md {
-        min-height: 400px ;
+        min-height: 400px;
     }
+
     @include lg {
-       min-height: 550px; ;
+        min-height: 550px;
+        
     }
+
     @include xl {
-        min-height: 770px ;
+        min-height: 770px;
     }
-    
-div{
-    padding-bottom: 40px ;
-    padding-left: 10px;
-}
+
+    div {
+        padding-bottom: 40px;
+        padding-left: 10px;
+    }
 
 
- #text{
-      
-h1{
-    color: $bluetoruslight;
-    font-size: rem-calc(28) ;
-    font-weight: 700;
-    margin-bottom: 8px;
+    #text {
+
+        h1 {
+            color: $bluetoruslight;
+            font-size: rem-calc(28);
+            font-weight: 700;
+            margin-bottom: 8px;
 
 
-}
-p {
-    color: $bluetoruslight;
-    font-size: rem-calc(16) ;
-    font-weight: 400;
-    margin-bottom: 16px;
+        }
 
-}
+        p {
+            color: $bluetoruslight;
+            font-size: rem-calc(16);
+            font-weight: 400;
+            margin-bottom: 16px;
+
+        }
 
     }
 }

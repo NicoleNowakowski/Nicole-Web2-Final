@@ -1,71 +1,111 @@
 #dailyschedule {
-padding-top: 40px;
+    padding-top: 40px;
+
     @include md {
         display: grid;
-        grid-template-columns: 16px auto 16px;
+        grid-template-columns: 10px auto 10px;
         grid-template-areas: ". dailyschedule .";
-        padding-top: 56px ;
+        padding-top: 56px;
     }
 
     @include lg {
         grid-template-columns: auto 1024px auto;
         padding-top: 80px;
     }
-    @include xl{
+
+    @include xl {
         padding-top: 96px;
     }
 
     >div {
 
+
         @include md {
             grid-area: dailyschedule;
         }
+
         h1 {
             text-align: center;
-
         }
 
-div{
-        @include md {
+        div {
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-areas: "pic times";
-            gap: 106px;
-        }
-        aside{
-            img{
-                padding-left: 72px ;
-            }
-            
-            h2{
-                text-align: center;
-            }
-        }
+            grid-template-columns: 88px auto;
+            grid-template-areas: "pic pic"
+                "times dailyevents";
 
-        ul {
-            li{
-                h2{text-align: left;}
-                h3{padding-left: 87px ;}
-                h4{padding-left: 87px ;}
-                button{margin-left: 87px ;}
+            @include md {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas: "pic times dailyevents";
+
             }
 
-        }
-       
-    }
-}
+            aside {
+                img {
+                    padding-left: 72px;
+                }
 
-    #times {
-        @include md {
-            grid-area: times;
+                h2 {
+                    text-align: center;
+                }
+            }
+            ul{
+                li{
+                   h2 {
+                        font-size: rem-calc(18);
+                        font-weight: 700;
+                        color: $maastrichtblue;
+                        text-align: right;
+                        padding-right: 15px;
+                        margin-bottom: 118px;
+                    } 
+                }
+            }
+
+            ul {
+                li {
+                    
+                    h3 {
+
+                        font-size: rem-calc(16);
+                        font-weight: 700;
+                        color: $bluetorusdark;
+                    }
+
+                    h4 {
+
+                        font-style: italic;
+                        font-size: rem-calc(16);
+                        color: $bluetorusdark;
+                    }
+
+
+                }
+
+            }
+
         }
     }
 
     #pic {
-        @include md {
-            grid-area: pic;
-        }
+
+        grid-area: pic;
     }
+
+    #times {
+
+        grid-area: times;
+    }
+
+
+    #dailyevents {
+
+        grid-area: dailyevents;
+
+    }
+
+
 
 
 
