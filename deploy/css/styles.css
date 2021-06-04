@@ -767,10 +767,7 @@ footer > div #socials ul li a:visited {
     grid-template-areas: "pic times dailyevents";
   }
 }
-#dailyschedule > div div aside img {
-  padding-left: 72px;
-}
-#dailyschedule > div div aside h2 {
+#dailyschedule > div div aside {
   text-align: center;
 }
 #dailyschedule > div div ul li h2 {
