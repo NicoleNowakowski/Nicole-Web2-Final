@@ -1,6 +1,7 @@
 #upcomingevents {
-padding-top: 40px;
-padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
     @include md {
         display: grid;
         grid-template-columns: 16px auto 16px;
@@ -11,51 +12,90 @@ padding-bottom: 40px;
 
     @include lg {
         grid-template-columns: auto 1024px auto;
-        padding-top:80px;
+        padding-top: 80px;
         padding-bottom: 80px;
     }
-    @include xl{
+
+    @include xl {
         padding-top: 96px;
         padding-bottom: 96px;
     }
 
+
     >div {
+        grid-area: upcomingevents;
 
-        @include md {
-            grid-area: upcomingevents;
+        h1 {
+            text-align: center;
         }
-        h1 {}
-
-div{
-        @include md {
+        div{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-areas: "dates picture";
-            gap: 106px;
-        }
+        grid-template-columns: 56px auto;
+        grid-template-areas: "picture picture"
+        "dates eventinfo";
 
-        ul {
-
-        }
-        aside {
+        @include md {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "dates eventinfo picture";
 
         }
+        aside{
+            text-align: center;
+        }
+        ul{
+            li{
+                h2{
+                    font-size: rem-calc(16);
+                    font-weight: 700;
+                    color: $maastrichtblue;
+                    text-align: right;
+                    padding-right: 15px;
+                    margin-bottom: 110px;
+                }
+            }
+        }
+        ul{
+            li{
+                h3{
+                    font-size: rem-calc(16);
+                    font-weight: 700;
+                    color: $bluetorusdark; 
+                }
+                h4{
+                    font-style: italic;
+                    font-size: rem-calc(16);
+                    color: $bluetorusdark;
+                }
+                p{
+                    font-size: rem-calc(16);
+                    font-weight:300;
+                    color: $bluetorus;
+                }
+            }
+        }
+
+        }
+
+        
     }
-}
+
+    #eventinfo {
+
+        grid-area: eventinfo;
+
+    }
+
 
     #dates {
-        @include md {
-            grid-area: dates;
-        }
+
+        grid-area: dates;
+
     }
 
-    #pic {
-        @include md {
-            grid-area: pic;
-        }
+    #picture {
+
+        grid-area: picture;
+
     }
-
-
-
 
 }

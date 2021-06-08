@@ -19,7 +19,6 @@
 
     >div {
 
-
         @include md {
             grid-area: dailyschedule;
         }
@@ -62,14 +61,12 @@
                 li {
                     
                     h3 {
-
                         font-size: rem-calc(16);
                         font-weight: 700;
                         color: $bluetorusdark;
                     }
 
                     h4 {
-
                         font-style: italic;
                         font-size: rem-calc(16);
                         color: $bluetorusdark;

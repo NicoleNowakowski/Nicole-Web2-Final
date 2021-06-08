@@ -713,17 +713,105 @@ footer > div #socials ul li a:visited {
   padding-bottom: 40px;
   padding-left: 10px;
 }
-#hero #text h1 {
+#hero div h1 {
   color: #EDEFF6;
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 8px;
+  text-align: center;
 }
-#hero #text p {
-  color: #EDEFF6;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 16px;
+#hero div p {
+  display: none;
+}
+#hero div button {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #hero #text h1 {
+    text-align: left;
+    font-size: 1.75rem;
+  }
+  #hero #text p {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: #EDEFF6;
+  }
+  #hero #text button {
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  #hero #text h1 {
+    text-align: left;
+    font-size: 2.25rem;
+  }
+  #hero #text p {
+    text-align: left;
+    font-size: 1.125rem;
+  }
+  #hero #text button {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  #hero #text h1 {
+    text-align: left;
+    font-size: 3rem;
+  }
+  #hero #text p {
+    text-align: left;
+    font-size: 1.3125rem;
+  }
+  #hero #text button {
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  #hero #text #textmd {
+    display: grid;
+  }
+}
+@media (min-width: 1024px) {
+  #hero #text #textmd {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  #hero #text #textmd {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #hero #text #textlg {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  #hero #text #textlg {
+    display: grid;
+  }
+}
+@media (min-width: 1200px) {
+  #hero #text #textlg {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #hero #text #textxl {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  #hero #text #textxl {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  #hero #text #textxl {
+    display: grid;
+  }
 }
 
 #dailyschedule {
@@ -824,28 +912,57 @@ footer > div #socials ul li a:visited {
     padding-bottom: 96px;
   }
 }
-@media (min-width: 768px) {
-  #upcomingevents > div {
-    grid-area: upcomingevents;
-  }
+#upcomingevents > div {
+  grid-area: upcomingevents;
+}
+#upcomingevents > div h1 {
+  text-align: center;
+}
+#upcomingevents > div div {
+  display: grid;
+  grid-template-columns: 56px auto;
+  grid-template-areas: "picture picture" "dates eventinfo";
 }
 @media (min-width: 768px) {
   #upcomingevents > div div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "dates picture";
-    gap: 106px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "dates eventinfo picture";
   }
 }
-@media (min-width: 768px) {
-  #upcomingevents #dates {
-    grid-area: dates;
-  }
+#upcomingevents > div div aside {
+  text-align: center;
 }
-@media (min-width: 768px) {
-  #upcomingevents #pic {
-    grid-area: pic;
-  }
+#upcomingevents > div div ul li h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #061F40;
+  text-align: right;
+  padding-right: 15px;
+  margin-bottom: 110px;
+}
+#upcomingevents > div div ul li h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #061D58;
+}
+#upcomingevents > div div ul li h4 {
+  font-style: italic;
+  font-size: 1rem;
+  color: #061D58;
+}
+#upcomingevents > div div ul li p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #092F8F;
+}
+#upcomingevents #eventinfo {
+  grid-area: eventinfo;
+}
+#upcomingevents #dates {
+  grid-area: dates;
+}
+#upcomingevents #picture {
+  grid-area: picture;
 }
 
 #plan {
