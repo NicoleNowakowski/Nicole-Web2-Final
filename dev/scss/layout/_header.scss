@@ -51,17 +51,14 @@ ul{
 
 
 	#social {
+		display: none;
 		@include md {
+			display: flex;
 			grid-area: social;
 		}
 
 		ul {
 			border: none;
-			display: flex;
-
-			
-
-
 			li {
 				margin-right: 16px;
 
@@ -86,17 +83,25 @@ ul{
 
 
 	#search {
+		display: none;
 		@include md {
+			display:inline-block;
 			grid-area: search;
 		}
 
 		form {
+		
+			position: relative;
+			
+		}
 			input {
 				background-color: $white;
-				border: none;
 				color: $maastrichtbluedark;
-				padding: 16px 2%;
-				width: 96%;
+				border: 1pt $bluetorusdark;
+				border-radius: 25px;
+				padding: 5px 5px 5px 25px;
+				z-index: 5;
+				text-indent: 18px;
 
 
 				&::placeholder {
@@ -127,15 +132,19 @@ ul{
 				@include xl {
 					width: 355px;
 				}
-
-				button {
 				
-					display: flex;
-					margin-left: auto;
-					margin-top: 16px;
-				}
 
+			input:focus{outline: none;}
 			}
+		
+			button {
+				position: absolute;
+				width: 30px;
+				height:100% ;
+				border-radius: 25px;
+				background-color: white;
+				border:none;
+					i{color:$berryblast;}
+				}
 		}
 	}
-}
