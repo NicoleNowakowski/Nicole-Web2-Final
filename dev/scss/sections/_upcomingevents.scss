@@ -4,98 +4,242 @@
 
     @include md {
         display: grid;
-        grid-template-columns: 16px auto 16px;
+        grid-template-columns: 30px auto 30px;
         grid-template-areas: ". upcomingevents .";
         padding-top: 56px;
         padding-bottom: 56px;
     }
 
     @include lg {
-        grid-template-columns: auto 1024px auto;
+        grid-template-columns:75px auto 75px;
         padding-top: 80px;
         padding-bottom: 80px;
     }
 
     @include xl {
+        grid-template-columns: auto 1070px auto;
         padding-top: 96px;
         padding-bottom: 96px;
     }
 
 
     >div {
-        grid-area: upcomingevents;
-
+        
         h1 {
             text-align: center;
+            font-size: rem-calc(24);
+            font-weight: 700;
+            color: $maastrichtbluedark;
         }
-        div{
+
+        div {
             display: grid;
-        grid-template-columns: 56px auto;
-        grid-template-areas: "picture picture"
-        "dates eventinfo";
+            grid-template-columns: 170px auto;
+            grid-template-areas: "picture picture"
+                "dates eventinfo";
 
-        @include md {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: "dates eventinfo picture";
+                @include md {
+                    grid-template-columns: 105px, 365px, 298px;
+                    grid-template-areas: "dates eventinfomd picture" 
+                }
+                @include lg {
+                    grid-template-columns: 160px 445px 419px;
+                    grid-template-areas: "dates eventinfolg picture";}
 
-        }
-        aside{
-            text-align: center;
-        }
-        ul{
-            li{
-                h2{
-                    font-size: rem-calc(16);
-                    font-weight: 700;
-                    color: $maastrichtblue;
-                    text-align: right;
-                    padding-right: 15px;
-                    margin-bottom: 110px;
+            aside {
+                img {
+                    width: 230px;
+                    height: 230px;
+                }
+
+                text-align: center;
+            }
+
+            ul {
+                li {
+                    h2 {
+                        font-size: rem-calc(18);
+                        font-weight: 700;
+                        color: $maastrichtblue;
+                        text-align: right;
+                        padding-right: 15px;
+                        margin-bottom: 117px;
+                    }
+                }
+            }
+
+            ul {
+                li {
+                    h3 {
+                        font-size: rem-calc(16);
+                        font-weight: 700;
+                        color: $bluetorusdark;
+                        margin-bottom: 0;
+
+                    }
+
+                    h4 {
+                        font-style: italic;
+                        font-size: rem-calc(16);
+                        color: $bluetorusdark;
+                        margin: 0;
+
+                    }
+
+                    p {
+                        font-size: rem-calc(16);
+                        font-weight: 300;
+                        color: $bluetorus;
+                        margin-top: 0;
+                    }
                 }
             }
         }
-        ul{
-            li{
-                h3{
-                    font-size: rem-calc(16);
-                    font-weight: 700;
-                    color: $bluetorusdark; 
-                }
-                h4{
-                    font-style: italic;
-                    font-size: rem-calc(16);
-                    color: $bluetorusdark;
-                }
-                p{
-                    font-size: rem-calc(16);
-                    font-weight:300;
-                    color: $bluetorus;
-                }
-            }
-        }
 
-        }
+             @include md {
+                grid-area: upcomingevents;
 
+                h1{
+                 font-size: rem-calc(28);
+    
+                    }
+
+                    div {
+                        aside {
+                            img {
+                                width: 262px;
+                                height: 262px;
+                            }
+                        }
         
+                        h2 {
+                            font-size: rem-calc(24)
+                        }
+        
+                        h3 {
+                            font-size: rem-calc(16)
+                        }
+        
+                        h4 {
+                            font-size: rem-calc(16)
+                        }
+                        p{
+                            font-size: rem-calc(16)
+                        }
+
+                }
+            }
+            @include lg {
+                h1 {
+                    font-size: rem-calc(36);
+                }
+    
+                div {
+                    aside {
+                        img {
+                            width: 341px;
+                            height: 341px;
+                        }
+    
+                    }
+    
+                    h2 {
+                        font-size: rem-calc(28)
+                    }
+    
+                    h3 {
+                        font-size: rem-calc(18)
+                    }
+    
+                    h4 {
+                        font-size: rem-calc(18)
+                    }
+                    p{
+                        font-size: rem-calc(18)
+                    }
+                }
+    
+            }
+    
+            @include xl {
+                h1 {
+                
+                    font-size: rem-calc(48);
+                }
+    
+                div {
+                    aside {
+                        img {
+                            width: 445px;
+                            height: 445px;
+                        }
+    
+                    }
+    
+                    h2 {
+                        font-size: rem-calc(36)
+                    }
+    
+                    h3 {
+                        font-size: rem-calc(21)
+                    }
+    
+                    h4 {
+                        font-size: rem-calc(21)
+                    }
+                    p{
+                        font-size: rem-calc(21)
+                    }
+                }
+            }
+        }
+
+            
+            
+
+
+        #eventinfo {
+            grid-area: eventinfo;
+
+            @include md {
+                display: none;
+            }
+
+        }
+
+        #eventinfomd {
+            display: none;
+
+            @include md {
+                display: grid;
+                grid-area: eventinfomd;
+            }
+
+            @include lg {
+                display: none;
+            }
+
+        }
+
+        #eventinfolg {
+            display: none;
+
+            @include lg {
+                display: grid;
+                grid-area: eventinfolg;
+            }
+
+
+        }
+
+        #dates {
+
+            grid-area: dates;
+
+        }
+
+        #picture {
+
+            grid-area: picture;
+        }
     }
-
-    #eventinfo {
-
-        grid-area: eventinfo;
-
-    }
-
-
-    #dates {
-
-        grid-area: dates;
-
-    }
-
-    #picture {
-
-        grid-area: picture;
-
-    }
-
-}

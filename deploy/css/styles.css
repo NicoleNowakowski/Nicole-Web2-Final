@@ -819,19 +819,20 @@ footer > div #socials ul li a:visited {
 @media (min-width: 768px) {
   #dailyschedule {
     display: grid;
-    grid-template-columns: 10px auto 10px;
+    grid-template-columns: 30px auto 30px;
     grid-template-areas: ". dailyschedule .";
     padding-top: 56px;
   }
 }
 @media (min-width: 1024px) {
   #dailyschedule {
-    grid-template-columns: auto 1024px auto;
+    grid-template-columns: 75px auto 75px;
     padding-top: 80px;
   }
 }
 @media (min-width: 1200px) {
   #dailyschedule {
+    grid-template-columns: auto 1070px auto;
     padding-top: 96px;
   }
 }
@@ -843,7 +844,7 @@ footer > div #socials ul li a:visited {
 }
 #dailyschedule > div div {
   display: grid;
-  grid-template-columns: 60px auto;
+  grid-template-columns: 160px auto;
   grid-template-areas: "pic pic" "times dailyevents";
 }
 @media (min-width: 768px) {
@@ -954,11 +955,9 @@ footer > div #socials ul li a:visited {
 }
 #dailyschedule #times {
   grid-area: times;
-  padding-left: 30px;
 }
 #dailyschedule #dailyevents {
   grid-area: dailyevents;
-  padding-left: 30px;
 }
 
 #upcomingevents {
@@ -968,7 +967,7 @@ footer > div #socials ul li a:visited {
 @media (min-width: 768px) {
   #upcomingevents {
     display: grid;
-    grid-template-columns: 16px auto 16px;
+    grid-template-columns: 30px auto 30px;
     grid-template-areas: ". upcomingevents .";
     padding-top: 56px;
     padding-bottom: 56px;
@@ -976,62 +975,170 @@ footer > div #socials ul li a:visited {
 }
 @media (min-width: 1024px) {
   #upcomingevents {
-    grid-template-columns: auto 1024px auto;
+    grid-template-columns: 75px auto 75px;
     padding-top: 80px;
     padding-bottom: 80px;
   }
 }
 @media (min-width: 1200px) {
   #upcomingevents {
+    grid-template-columns: auto 1070px auto;
     padding-top: 96px;
     padding-bottom: 96px;
   }
 }
-#upcomingevents > div {
-  grid-area: upcomingevents;
-}
 #upcomingevents > div h1 {
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #031020;
 }
 #upcomingevents > div div {
   display: grid;
-  grid-template-columns: 56px auto;
+  grid-template-columns: 170px auto;
   grid-template-areas: "picture picture" "dates eventinfo";
 }
 @media (min-width: 768px) {
   #upcomingevents > div div {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "dates eventinfo picture";
+    grid-template-columns: 105px, 365px, 298px;
+    grid-template-areas: "dates eventinfomd picture";
+  }
+}
+@media (min-width: 1024px) {
+  #upcomingevents > div div {
+    grid-template-columns: 160px 445px 419px;
+    grid-template-areas: "dates eventinfolg picture";
   }
 }
 #upcomingevents > div div aside {
   text-align: center;
 }
+#upcomingevents > div div aside img {
+  width: 230px;
+  height: 230px;
+}
 #upcomingevents > div div ul li h2 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: #061F40;
   text-align: right;
   padding-right: 15px;
-  margin-bottom: 110px;
+  margin-bottom: 117px;
 }
 #upcomingevents > div div ul li h3 {
   font-size: 1rem;
   font-weight: 700;
   color: #061D58;
+  margin-bottom: 0;
 }
 #upcomingevents > div div ul li h4 {
   font-style: italic;
   font-size: 1rem;
   color: #061D58;
+  margin: 0;
 }
 #upcomingevents > div div ul li p {
   font-size: 1rem;
   font-weight: 300;
   color: #092F8F;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  #upcomingevents > div {
+    grid-area: upcomingevents;
+  }
+  #upcomingevents > div h1 {
+    font-size: 1.75rem;
+  }
+  #upcomingevents > div div aside img {
+    width: 262px;
+    height: 262px;
+  }
+  #upcomingevents > div div h2 {
+    font-size: 1.5rem;
+  }
+  #upcomingevents > div div h3 {
+    font-size: 1rem;
+  }
+  #upcomingevents > div div h4 {
+    font-size: 1rem;
+  }
+  #upcomingevents > div div p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #upcomingevents > div h1 {
+    font-size: 2.25rem;
+  }
+  #upcomingevents > div div aside img {
+    width: 341px;
+    height: 341px;
+  }
+  #upcomingevents > div div h2 {
+    font-size: 1.75rem;
+  }
+  #upcomingevents > div div h3 {
+    font-size: 1.125rem;
+  }
+  #upcomingevents > div div h4 {
+    font-size: 1.125rem;
+  }
+  #upcomingevents > div div p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  #upcomingevents > div h1 {
+    font-size: 3rem;
+  }
+  #upcomingevents > div div aside img {
+    width: 445px;
+    height: 445px;
+  }
+  #upcomingevents > div div h2 {
+    font-size: 2.25rem;
+  }
+  #upcomingevents > div div h3 {
+    font-size: 1.3125rem;
+  }
+  #upcomingevents > div div h4 {
+    font-size: 1.3125rem;
+  }
+  #upcomingevents > div div p {
+    font-size: 1.3125rem;
+  }
 }
 #upcomingevents #eventinfo {
   grid-area: eventinfo;
+}
+@media (min-width: 768px) {
+  #upcomingevents #eventinfo {
+    display: none;
+  }
+}
+#upcomingevents #eventinfomd {
+  display: none;
+}
+@media (min-width: 768px) {
+  #upcomingevents #eventinfomd {
+    display: grid;
+    grid-area: eventinfomd;
+  }
+}
+@media (min-width: 1024px) {
+  #upcomingevents #eventinfomd {
+    display: none;
+  }
+}
+#upcomingevents #eventinfolg {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #upcomingevents #eventinfolg {
+    display: grid;
+    grid-area: eventinfolg;
+  }
 }
 #upcomingevents #dates {
   grid-area: dates;

@@ -4,17 +4,18 @@
 
     @include md {
         display: grid;
-        grid-template-columns: 10px auto 10px;
+        grid-template-columns: 30px auto 30px;
         grid-template-areas: ". dailyschedule .";
         padding-top: 56px;
     }
 
     @include lg {
-        grid-template-columns: auto 1024px auto;
+        grid-template-columns: 75px auto 75px;
         padding-top: 80px;
     }
 
     @include xl {
+        grid-template-columns: auto 1070px auto;
         padding-top: 96px;
     }
 
@@ -29,7 +30,7 @@
 
         div {
             display: grid;
-            grid-template-columns: 60px auto;
+            grid-template-columns: 160px auto;
             grid-template-areas: "pic pic"
                 "times dailyevents";
 
@@ -97,7 +98,7 @@
                 aside {
                     img {
                         width: 301px;
-                        height: 301px
+                        height: 301px;
                     }
 
                     font-size: rem-calc(24)
@@ -186,13 +187,13 @@
 
     #times {
         grid-area: times;
-        padding-left: 30px;
+        
     }
 
 
     #dailyevents {
         grid-area: dailyevents;
-       padding-left: 30px;
+      
     }
 
 }
