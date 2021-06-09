@@ -449,85 +449,78 @@ header {
 header > div {
   grid-area: header;
   display: grid;
-  grid-template-areas: "logo . . social" "logo . . search";
+  grid-template-areas: "logo . . burger" "logo . . burger";
   grid-template-columns: repeat(4, 1fr);
 }
-header > div ul {
-  display: flex;
-  justify-content: flex-end;
+@media (min-width: 1024px) {
+  header > div {
+    grid-template-areas: "logo nav . social" "logo nav . search";
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-header > div ul li {
-  padding: 5px;
-  font-size: 18px;
-}
-header > div ul li a {
-  color: white;
-}
-header #logo {
+
+#logo {
   grid-area: logo;
 }
-header #logo img {
+#logo img {
   width: 300px;
 }
 @media (min-width: 768px) {
-  header #logo img {
+  #logo img {
     width: 367px;
   }
 }
 @media (min-width: 1024px) {
-  header #logo img {
+  #logo img {
     width: 395px;
   }
 }
 @media (min-width: 1200px) {
-  header #logo img {
+  #logo img {
     width: 537px;
   }
 }
-header #social {
+
+#social {
   display: none;
-}
-@media (min-width: 768px) {
-  header #social {
-    display: flex;
-    grid-area: social;
-  }
-}
-header #social ul {
-  border: none;
-}
-header #social ul li {
-  margin-right: 16px;
 }
 @media (min-width: 1024px) {
-  header #social ul li {
-    margin-left: 16px;
-    margin-right: 0px;
+  #social {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: social;
+  }
+  #social li {
+    padding: 10px;
+  }
+  #social li a {
+    color: white;
+  }
+  #social li a:link,
+#social li a:visited {
+    color: #fff;
+    font-size: 1.875rem;
+  }
+  #social li a:link:hover, #social li a:link:active,
+#social li a:visited:hover,
+#social li a:visited:active {
+    color: #000;
   }
 }
-header #social ul li a:link,
-header #social ul li a:visited {
-  color: #fff;
-  font-size: 1.875rem;
-}
-header #social ul li a:link:hover, header #social ul li a:link:active,
-header #social ul li a:visited:hover,
-header #social ul li a:visited:active {
-  color: #000;
-}
-header #search {
+
+#search {
   display: none;
 }
-@media (min-width: 768px) {
-  header #search {
+@media (min-width: 1024px) {
+  #search {
     display: inline-block;
     grid-area: search;
   }
 }
-header #search form {
+#search form {
   position: relative;
 }
-header #search input {
+#search input {
   background-color: #fff;
   color: #031020;
   border: 1pt #061D58;
@@ -536,39 +529,39 @@ header #search input {
   z-index: 5;
   text-indent: 18px;
 }
-header #search input::placeholder {
+#search input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #031020;
   /* Firefox */
   opacity: 1;
 }
-header #search input:-ms-input-placeholder {
+#search input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #031020;
 }
-header #search input::-ms-input-placeholder {
+#search input::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #031020;
 }
 @media (min-width: 768px) {
-  header #search input {
+  #search input {
     width: 175px;
   }
 }
 @media (min-width: 1024px) {
-  header #search input {
+  #search input {
     width: 235px;
   }
 }
 @media (min-width: 1200px) {
-  header #search input {
+  #search input {
     width: 355px;
   }
 }
-header #search input input:focus {
+#search input input:focus {
   outline: none;
 }
-header #search button {
+#search button {
   position: absolute;
   width: 30px;
   height: 100%;
@@ -576,8 +569,48 @@ header #search button {
   background-color: white;
   border: none;
 }
-header #search button i {
+#search button i {
   color: #EA68B0;
+}
+
+#burger-container {
+  align-items: center;
+  display: flex;
+  grid-area: burger;
+  padding-left: 50px;
+  color: white;
+}
+@media (min-width: 1024px) {
+  #burger-container {
+    display: none;
+  }
+}
+#burger-container i {
+  cursor: pointer;
+  font-size: 1.875rem;
+}
+
+#nav-container {
+  display: none;
+  grid-area: nav;
+  padding: 25px 10px 10px;
+}
+#nav-container ul {
+  display: flex;
+  justify-content: flex-end;
+}
+#nav-container ul li {
+  padding-right: 30px;
+}
+#nav-container ul li a {
+  font-size: 1rem;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  #nav-container {
+    display: block;
+    color: white;
+  }
 }
 
 /* =============
