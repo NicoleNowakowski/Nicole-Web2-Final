@@ -691,12 +691,14 @@ footer > div #socials ul li a:visited {
   background-position: center;
   background-size: cover;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   min-height: 250px;
 }
 @media (min-width: 768px) {
   #hero {
     min-height: 400px;
+    align-items: flex-end;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 1024px) {
@@ -722,9 +724,6 @@ footer > div #socials ul li a:visited {
 }
 #hero div p {
   display: none;
-}
-#hero div button {
-  text-align: center;
 }
 @media (min-width: 768px) {
   #hero #text h1 {
@@ -836,17 +835,15 @@ footer > div #socials ul li a:visited {
     padding-top: 96px;
   }
 }
-@media (min-width: 768px) {
-  #dailyschedule > div {
-    grid-area: dailyschedule;
-  }
-}
 #dailyschedule > div h1 {
   text-align: center;
+  font-size: rem-cac(24);
+  font-weight: 700;
+  color: #031020;
 }
 #dailyschedule > div div {
   display: grid;
-  grid-template-columns: 88px auto;
+  grid-template-columns: 60px auto;
   grid-template-areas: "pic pic" "times dailyevents";
 }
 @media (min-width: 768px) {
@@ -857,6 +854,13 @@ footer > div #socials ul li a:visited {
 }
 #dailyschedule > div div aside {
   text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #314661;
+}
+#dailyschedule > div div aside img {
+  width: 175px;
+  height: 175px;
 }
 #dailyschedule > div div ul li h2 {
   font-size: 1.125rem;
@@ -876,14 +880,85 @@ footer > div #socials ul li a:visited {
   font-size: 1rem;
   color: #061D58;
 }
+@media (min-width: 768px) {
+  #dailyschedule > div {
+    grid-area: dailyschedule;
+  }
+  #dailyschedule > div h1 {
+    margin-left: 470px;
+    font-size: 1.75rem;
+  }
+  #dailyschedule > div div aside {
+    font-size: 1.5rem;
+  }
+  #dailyschedule > div div aside img {
+    width: 301px;
+    height: 301px;
+  }
+  #dailyschedule > div div h2 {
+    font-size: 1.5rem;
+  }
+  #dailyschedule > div div h3 {
+    font-size: 1rem;
+  }
+  #dailyschedule > div div h4 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #dailyschedule > div h1 {
+    margin-left: 600px;
+    font-size: 2.25rem;
+  }
+  #dailyschedule > div div aside {
+    font-size: 1.75rem;
+  }
+  #dailyschedule > div div aside img {
+    width: 341px;
+    height: 341px;
+  }
+  #dailyschedule > div div h2 {
+    font-size: 1.75rem;
+  }
+  #dailyschedule > div div h3 {
+    font-size: 1.125rem;
+  }
+  #dailyschedule > div div h4 {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  #dailyschedule > div h1 {
+    margin-left: 650px;
+    font-size: 3rem;
+  }
+  #dailyschedule > div div aside {
+    font-size: 2.25rem;
+  }
+  #dailyschedule > div div aside img {
+    width: 445px;
+    height: 445px;
+  }
+  #dailyschedule > div div h2 {
+    font-size: 2.25rem;
+  }
+  #dailyschedule > div div h3 {
+    font-size: 1.3125rem;
+  }
+  #dailyschedule > div div h4 {
+    font-size: 1.3125rem;
+  }
+}
 #dailyschedule #pic {
   grid-area: pic;
 }
 #dailyschedule #times {
   grid-area: times;
+  padding-left: 30px;
 }
 #dailyschedule #dailyevents {
   grid-area: dailyevents;
+  padding-left: 30px;
 }
 
 #upcomingevents {

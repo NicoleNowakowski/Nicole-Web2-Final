@@ -1,4 +1,5 @@
 #dailyschedule {
+
     padding-top: 40px;
 
     @include md {
@@ -19,47 +20,52 @@
 
     >div {
 
-        @include md {
-            grid-area: dailyschedule;
-        }
-
         h1 {
             text-align: center;
+            font-size: rem-cac(24);
+            font-weight: 700;
+            color: $maastrichtbluedark;
         }
 
         div {
-
             display: grid;
-            grid-template-columns: 88px auto;
+            grid-template-columns: 60px auto;
             grid-template-areas: "pic pic"
                 "times dailyevents";
 
             @include md {
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-areas: "pic times dailyevents";
-
             }
 
             aside {
+                img {
+                    width: 175px;
+                    height: 175px;
+                }
+
                 text-align: center;
-          
+                font-size: rem-calc(18);
+                font-weight: 700;
+                color: $maastrichtbluelight;
             }
-            ul{
-                li{
-                   h2 {
+
+            ul {
+                li {
+                    h2 {
                         font-size: rem-calc(18);
                         font-weight: 700;
                         color: $maastrichtblue;
                         text-align: right;
                         padding-right: 15px;
                         margin-bottom: 118px;
-                    } 
+                    }
                 }
             }
 
             ul {
                 li {
-                    
+
                     h3 {
                         font-size: rem-calc(16);
                         font-weight: 700;
@@ -78,28 +84,115 @@
             }
 
         }
+
+        @include md {
+            grid-area: dailyschedule;
+
+            h1 {
+                margin-left: 470px;
+                font-size: rem-calc(28);
+            }
+
+            div {
+                aside {
+                    img {
+                        width: 301px;
+                        height: 301px
+                    }
+
+                    font-size: rem-calc(24)
+                }
+
+                h2 {
+                    font-size: rem-calc(24)
+                }
+
+                h3 {
+                    font-size: rem-calc(16)
+                }
+
+                h4 {
+                    font-size: rem-calc(16)
+                }
+            }
+
+        }
+
+        @include lg {
+            h1 {
+                margin-left: 600px;
+                font-size: rem-calc(36);
+            }
+
+            div {
+                aside {
+                    img {
+                        width: 341px;
+                        height: 341px;
+                    }
+
+                    font-size: rem-calc(28)
+                }
+
+                h2 {
+                    font-size: rem-calc(28)
+                }
+
+                h3 {
+                    font-size: rem-calc(18)
+                }
+
+                h4 {
+                    font-size: rem-calc(18)
+                }
+            }
+
+        }
+
+        @include xl {
+            h1 {
+                margin-left: 650px;
+                font-size: rem-calc(48);
+            }
+
+            div {
+                aside {
+                    img {
+                        width: 445px;
+                        height: 445px;
+                    }
+
+                    font-size: rem-calc(36)
+                }
+
+                h2 {
+                    font-size: rem-calc(36)
+                }
+
+                h3 {
+                    font-size: rem-calc(21)
+                }
+
+                h4 {
+                    font-size: rem-calc(21)
+                }
+            }
+        }
     }
 
     #pic {
-
         grid-area: pic;
     }
 
     #times {
-
         grid-area: times;
+        padding-left: 30px;
     }
 
 
     #dailyevents {
-
         grid-area: dailyevents;
-
+       padding-left: 30px;
     }
-
-
-
-
-
 
 }
