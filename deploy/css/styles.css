@@ -1440,24 +1440,22 @@ footer > div #socials ul li a:visited {
     padding-top: 96px;
   }
 }
-@media (min-width: 768px) {
-  #animals > div {
-    grid-area: animals;
-  }
-}
 #animals > div h1 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 8px;
   color: #031020;
+  margin-left: 10px;
 }
 #animals > div p {
   color: #031020;
   font-size: 1rem;
   font-weight: 400;
+  margin-left: 10px;
 }
 #animals > div button {
   margin-bottom: 16px;
+  margin-left: 10px;
 }
 @media (min-width: 768px) {
   #animals > div ul {
@@ -1484,6 +1482,33 @@ footer > div #socials ul li a:visited {
 #animals > div ul li img {
   width: 100%;
 }
+@media (min-width: 768px) {
+  #animals > div {
+    grid-area: animals;
+  }
+  #animals > div h1 {
+    font-size: 1.75rem;
+  }
+  #animals > div p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #animals > div h1 {
+    font-size: 2.25rem;
+  }
+  #animals > div p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  #animals > div h1 {
+    font-size: 3rem;
+  }
+  #animals > div p {
+    font-size: 1.3125rem;
+  }
+}
 #animals #a1 {
   align-items: flex-end;
   background-image: url("../img/animals/octopusphoto.jpg");
@@ -1494,11 +1519,16 @@ footer > div #socials ul li a:visited {
   justify-content: flex-end;
   align-items: flex-start;
   min-height: 317px;
+  margin-left: 10pt;
+  margin-right: 10pt;
 }
 @media (min-width: 768px) {
   #animals #a1 {
     grid-area: a1;
     min-height: 317px;
+  }
+  #animals #a1 h2 {
+    font-size: 1.3125rem;
   }
 }
 @media (min-width: 1024px) {
@@ -1518,6 +1548,12 @@ footer > div #socials ul li a:visited {
 @media (min-width: 1200px) {
   #animals #a1 {
     min-height: 655px;
+  }
+  #animals #a1 h2 {
+    font-size: 1.75rem;
+  }
+  #animals #a1 p {
+    ont-size: 1.3125rem;
   }
 }
 #animals #a2 {
@@ -1564,7 +1600,7 @@ footer > div #socials ul li a:visited {
 @media (min-width: 768px) {
   #events {
     display: grid;
-    grid-template-columns: 16px auto 16px;
+    grid-template-columns: 10px auto 10px;
     grid-template-areas: ". events .";
     padding-top: 56px;
     padding-bottom: 56px;
@@ -1572,20 +1608,16 @@ footer > div #socials ul li a:visited {
 }
 @media (min-width: 1024px) {
   #events {
-    grid-template-columns: auto 1024px auto;
+    grid-template-columns: auto 873px auto;
     padding-top: 80px;
     padding-bottom: 80px;
   }
 }
 @media (min-width: 1200px) {
   #events {
+    grid-template-columns: 50px auto 50px;
     padding-top: 96px;
     padding-bottom: 96px;
-  }
-}
-@media (min-width: 768px) {
-  #events > div {
-    grid-area: events;
   }
 }
 #events > div h1 {
@@ -1635,6 +1667,63 @@ footer > div #socials ul li a:visited {
 #events > div ul li button {
   margin-left: 10px;
   margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  #events > div {
+    grid-area: events;
+  }
+  #events > div h1 {
+    font-size: 1.75rem;
+  }
+  #events > div ul li span {
+    font-size: 1.5rem;
+  }
+  #events > div ul li i {
+    font-size: 1.5rem;
+  }
+  #events > div ul li img {
+    height: 24px;
+  }
+  #events > div ul li p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #events > div h1 {
+    font-size: 2.25rem;
+  }
+  #events > div ul li span {
+    font-size: 1.75rem;
+  }
+  #events > div ul li i {
+    font-size: 1.75rem;
+  }
+  #events > div ul li img {
+    height: 28px;
+  }
+  #events > div ul li p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  #events > div h1 {
+    font-size: 3rem;
+  }
+  #events > div ul li {
+    padding: 36px 30px 27px 26px;
+  }
+  #events > div ul li span {
+    font-size: 2.25rem;
+  }
+  #events > div ul li i {
+    font-size: 2.25rem;
+  }
+  #events > div ul li img {
+    height: 36px;
+  }
+  #events > div ul li p {
+    font-size: 1.3125rem;
+  }
 }
 @media (min-width: 768px) {
   #events > div #bday {

@@ -1,28 +1,28 @@
 #events {
     padding-top: 40px;
     padding-bottom: 40px;
+
     @include md {
         display: grid;
-        grid-template-columns: 16px auto 16px;
+        grid-template-columns: 10px auto 10px;
         grid-template-areas: ". events .";
-        padding-top:56px;
-        padding-bottom:56px;
+        padding-top: 56px;
+        padding-bottom: 56px;
     }
 
     @include lg {
-        grid-template-columns: auto 1024px auto;
-        padding-top:80px;
+        grid-template-columns: auto 873px auto;
+        padding-top: 80px;
         padding-bottom: 80px;
     }
-    @include xl{
-        padding-top:96px;
-        padding-bottom: 96px ;
+
+    @include xl {
+        grid-template-columns: 50px auto 50px;
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
 
     >div {
-        @include md {
-            grid-area: events;
-        }
 
         h1 {
             font-weight: 700;
@@ -36,7 +36,7 @@
         ul {
             display: grid;
             gap: 20px;
-            
+
             @include md {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -46,21 +46,21 @@
             }
 
             li {
-                background-color: $bluetoruslight ;
-                
+                background-color: $bluetoruslight;
+
                 span {
                     font-weight: 700;
                     font-size: rem-calc(18);
                     color: $maastrichtblue;
-                   padding-left: 10px;
+                    padding-left: 10px;
 
                 }
 
                 i {
                     font-size: 16px;
-                   padding-left: 5pt;
-                   padding-top: 24px;
-                   
+                    padding-left: 5pt;
+                    padding-top: 24px;
+
                 }
 
                 img {
@@ -75,14 +75,80 @@
                     color: $maastrichtblue;
                     padding-left: 10px;
                 }
-                button{
-                margin-left: 10px;
-                margin-bottom: 20px;
+
+                button {
+                    margin-left: 10px;
+                    margin-bottom: 20px;
                 }
             }
 
 
         }
+
+        @include md {
+            grid-area: events;
+
+            h1 {
+                font-size: rem-calc(28);
+            }
+
+            ul {
+                li {
+                    span{font-size: rem-calc(24); }
+                    i {
+                        font-size: rem-calc(24);
+                    }
+                    img{ height:24px }
+
+                    p {
+                        font-size: rem-calc(16);
+                    }
+                }
+            }
+
+        }
+
+        @include lg {
+            h1 {
+                font-size: rem-calc(36);
+            }
+
+            ul {
+                li {
+                    span{font-size: rem-calc(28); }
+                    i {
+                        font-size: rem-calc(28);
+                    }
+                    img{ height:28px }
+                    p {
+                        font-size: rem-calc(18);
+                    }
+                }
+            }
+
+        }
+
+        @include xl {
+            h1 {
+                font-size: rem-calc(48);
+            }
+
+            ul {
+                li {
+                    padding: 36px 30px 27px 26px ;
+                    span{font-size: rem-calc(36); }
+                    i {
+                        font-size: rem-calc(36);
+                    }
+                    img{ height:36px }
+                    p {
+                        font-size: rem-calc(21);
+                    }
+                }
+            }
+
+        }
+
 
 
         #bday {

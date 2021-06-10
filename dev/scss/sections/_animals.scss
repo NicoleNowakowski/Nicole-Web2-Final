@@ -1,41 +1,42 @@
 #animals {
     padding-top: 40px;
+
     @include md {
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". animals .";
-        padding-top: 56px ;
+        padding-top: 56px;
     }
 
     @include lg {
         grid-template-columns: auto 1024px auto;
         padding-top: 80px;
     }
-    @include xl{
+
+    @include xl {
         padding-top: 96px;
     }
 
     >div {
-
-        @include md {
-            grid-area: animals;
-        }
 
         h1 {
             font-size: rem-calc(24px);
             font-weight: 700;
             margin-bottom: 8px;
             color: $maastrichtbluedark;
+            margin-left: 10px;
         }
 
         p {
             color: $maastrichtbluedark;
             font-size: rem-calc(16pt);
             font-weight: 400;
+            margin-left: 10px;
         }
 
         button {
             margin-bottom: 16px;
+            margin-left: 10px;
         }
 
         ul {
@@ -76,6 +77,38 @@
                 }
             }
         }
+
+        @include md {
+            grid-area: animals;
+
+            h1 {
+                font-size: rem-calc(28);
+            }
+
+            p {
+                font-size: rem-calc(16);
+            }
+        }
+
+        @include lg {
+            h1 {
+                font-size: rem-calc(36);
+            }
+
+            p {
+                font-size: rem-calc(18);
+            }
+        }
+
+        @include xl {
+            h1 {
+                font-size: rem-calc(48);
+            }
+
+            p {
+                font-size: rem-calc(21);
+            }
+        }
     }
 
     #a1 {
@@ -87,14 +120,19 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
-
         min-height: 317px;
+        margin-left: 10pt;
+        margin-right: 10pt;
 
 
         @include md {
 
             grid-area: a1;
             min-height: 317px;
+
+            h2 {
+                font-size: rem-calc(21);
+            }
         }
 
         @include lg {
@@ -114,6 +152,14 @@
 
         @include xl {
             min-height: 655px;
+
+            h2 {
+                font-size: rem-calc(28);
+            }
+
+            p {
+                ont-size: rem-calc(21);
+            }
         }
     }
 
