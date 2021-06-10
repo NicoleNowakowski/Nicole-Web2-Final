@@ -382,11 +382,20 @@ ul li {
 /* =============
     Typography
 ============= */
-h1, h2 {
+h1,
+h2 {
   font-family: "Ubuntu", sans-serif;
 }
 
-p, h3, h4, h5, button, input, span, a, address {
+p,
+h3,
+h4,
+h5,
+button,
+input,
+span,
+a,
+address {
   font-family: "Lato", sans-serif;
 }
 
@@ -639,8 +648,15 @@ footer > div {
 @media (min-width: 768px) {
   footer > div {
     grid-area: footer;
-    grid-template-areas: "socials  hours info";
+    grid-template-areas: "socials . info";
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  footer > div {
+    grid-area: footer;
+    grid-template-areas: "socials hours hours info";
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 footer > div section {
@@ -690,7 +706,6 @@ footer > div #info ul li {
 footer > div #info ul li i {
   color: #C1C0E1;
   font-size: 25px;
-  text-align: center;
   margin-right: 10px;
 }
 footer > div #info ul li address {

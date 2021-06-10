@@ -216,21 +216,57 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/design\/Nowakowski_LongIslandAquariumDesignFinal.sketch" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
+    "\/design\/Desktop HD.jpg" : {
+      "ft" : 16384,
+      "iS" : 5148440,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/design\/Nowakowski_LongIslandAquariumDesignFinal.sketch",
-      "oF" : 0
+      "oAP" : "\/design\/Desktop HD.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
-    "\/design\/structure-tags.sketch" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
+    "\/design\/Desktop.jpg" : {
+      "ft" : 16384,
+      "iS" : 3432025,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/design\/structure-tags.sketch",
-      "oF" : 0
+      "oAP" : "\/design\/Desktop.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/design\/Mobile.jpg" : {
+      "ft" : 16384,
+      "iS" : 1007815,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/design\/Mobile.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/design\/Tablet.jpg" : {
+      "ft" : 16384,
+      "iS" : 1847347,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/design\/Tablet.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/dev\/content\/animals.kit" : {
       "cB" : 0,

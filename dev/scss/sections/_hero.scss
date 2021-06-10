@@ -36,14 +36,14 @@
         p {
             display: none;
         }
-      
+
     }
 
     #text {
-        button{
+        button {
             margin-left: 40px;
             padding-right: 50px;
-            padding-left:50px;
+            padding-left: 50px;
         }
 
         @include md {
@@ -62,11 +62,20 @@
 
             button {
                 text-align: left;
-                margin:0;
+                margin: 0;
             }
-            #textmd{ display:grid;}
-            #textlg{display: none;}
-            #textel{display:none;}
+
+            #textmd {
+                display: grid;
+            }
+
+            #textlg {
+                display: none;
+            }
+
+            #textel {
+                display: none;
+            }
         }
 
         @include lg {
@@ -77,9 +86,18 @@
             p {
                 font-size: rem-calc(18);
             }
-            #textmd{display: none;}
-            #textlg{display: grid;}
-            #textxl{display: none;}
+
+            #textmd {
+                display: none;
+            }
+
+            #textlg {
+                display: grid;
+            }
+
+            #textxl {
+                display: none;
+            }
         }
 
 
@@ -91,9 +109,18 @@
             p {
                 font-size: rem-calc(21);
             }
-            #textmd{display: none;}
-            #textlg{display: none;}
-            #textxl{display: grid;}
+
+            #textmd {
+                display: none;
+            }
+
+            #textlg {
+                display: none;
+            }
+
+            #textxl {
+                display: grid;
+            }
         }
 
     }
