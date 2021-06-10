@@ -176,7 +176,7 @@
 
         @include md {
             grid-area: p1;
-            padding-top: 30px;
+            padding-top: 15px;
 
         }
 
@@ -184,9 +184,7 @@
             padding-top: 35px;
         }
 
-        @include xl {
-            padding-top: 55px;
-        }
+        
     }
 
     #specialoffers {
@@ -198,7 +196,7 @@
         }
 
         button {
-            margin-left: 150px;
+            margin-left: 10px;
             padding-right: 60px;
             padding-left: 60px;
         }
@@ -230,7 +228,7 @@
         }
 
         button {
-            margin-left: 150px;
+            margin-left: 10px;
             padding-right: 60px;
             padding-left: 60px;
         }
@@ -262,7 +260,7 @@
         }
 
         button {
-            margin-left: 150px;
+            margin-left: 20px;
             padding-right: 60px;
             padding-left: 60px;
         }
@@ -270,13 +268,13 @@
         @include md {
             grid-area: p4;
             margin: 0;
-            p {
-                display: block;
-                text-align: center;
-            }
+            padding-top: 50px;
+            
 
             button {
-                margin-left: 15px;
+                margin-left: 25px;
+                padding-right: 30px;
+                padding-left: 30px;
             }
 
            
@@ -285,12 +283,16 @@
         @include lg {
             grid-area: p4;
             margin: 0;
+            padding-top: 5px;
             p {
+                display: block;
                 text-align: center;
+                
             }
-
             button {
-                margin-left: 65px;
+                margin-left: 55px;
+                padding-right: 60px;
+            padding-left: 60px;
             }
 
             
