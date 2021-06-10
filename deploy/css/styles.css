@@ -1079,7 +1079,10 @@ footer > div #socials ul li a:visited {
     grid-area: upcomingevents;
   }
   #upcomingevents > div h1 {
+    display: grid;
     font-size: 1.75rem;
+    text-align: left;
+    margin-left: 100px;
   }
   #upcomingevents > div div aside img {
     width: 262px;
@@ -1169,6 +1172,19 @@ footer > div #socials ul li a:visited {
   #upcomingevents #eventinfolg {
     display: grid;
     grid-area: eventinfolg;
+  }
+}
+#upcomingevents #header {
+  display: none;
+}
+@media (min-width: 768px) {
+  #upcomingevents #header {
+    display: grid;
+  }
+}
+@media (min-width: 768px) {
+  #upcomingevents #headermobile {
+    display: none;
   }
 }
 #upcomingevents #dates {

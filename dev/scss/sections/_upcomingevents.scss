@@ -11,7 +11,7 @@
     }
 
     @include lg {
-        grid-template-columns:75px auto 75px;
+        grid-template-columns: 75px auto 75px;
         padding-top: 80px;
         padding-bottom: 80px;
     }
@@ -22,9 +22,8 @@
         padding-bottom: 96px;
     }
 
-
     >div {
-        
+
         h1 {
             text-align: center;
             font-size: rem-calc(24);
@@ -38,13 +37,15 @@
             grid-template-areas: "picture picture"
                 "dates eventinfo";
 
-                @include md {
-                    grid-template-columns: 105px, 365px, 298px;
-                    grid-template-areas: "dates eventinfomd picture" 
-                }
-                @include lg {
-                    grid-template-columns: 160px 445px 419px;
-                    grid-template-areas: "dates eventinfolg picture";}
+            @include md {
+                grid-template-columns: 105px, 365px, 298px;
+                grid-template-areas: "dates eventinfomd picture"
+            }
+
+            @include lg {
+                grid-template-columns: 160px 445px 419px;
+                grid-template-areas: "dates eventinfolg picture";
+            }
 
             aside {
                 img {
@@ -96,151 +97,167 @@
             }
         }
 
-             @include md {
-                grid-area: upcomingevents;
+        @include md {
+            grid-area: upcomingevents;
 
-                h1{
-                 font-size: rem-calc(28);
-    
-                    }
-
-                    div {
-                        aside {
-                            img {
-                                width: 262px;
-                                height: 262px;
-                            }
-                        }
-        
-                        h2 {
-                            font-size: rem-calc(24)
-                        }
-        
-                        h3 {
-                            font-size: rem-calc(16)
-                        }
-        
-                        h4 {
-                            font-size: rem-calc(16)
-                        }
-                        p{
-                            font-size: rem-calc(16)
-                        }
-
-                }
-            }
-            @include lg {
-                h1 {
-                    font-size: rem-calc(36);
-                }
-    
-                div {
-                    aside {
-                        img {
-                            width: 341px;
-                            height: 341px;
-                        }
-    
-                    }
-    
-                    h2 {
-                        font-size: rem-calc(28)
-                    }
-    
-                    h3 {
-                        font-size: rem-calc(18)
-                    }
-    
-                    h4 {
-                        font-size: rem-calc(18)
-                    }
-                    p{
-                        font-size: rem-calc(18)
-                    }
-                }
-    
-            }
-    
-            @include xl {
-                h1 {
-                
-                    font-size: rem-calc(48);
-                }
-    
-                div {
-                    aside {
-                        img {
-                            width: 445px;
-                            height: 445px;
-                        }
-    
-                    }
-    
-                    h2 {
-                        font-size: rem-calc(36)
-                    }
-    
-                    h3 {
-                        font-size: rem-calc(21)
-                    }
-    
-                    h4 {
-                        font-size: rem-calc(21)
-                    }
-                    p{
-                        font-size: rem-calc(21)
-                    }
-                }
-            }
-        }
-
-            
-            
-
-
-        #eventinfo {
-            grid-area: eventinfo;
-
-            @include md {
-                display: none;
-            }
-
-        }
-
-        #eventinfomd {
-            display: none;
-
-            @include md {
+            h1 {
                 display: grid;
-                grid-area: eventinfomd;
+                font-size: rem-calc(28);
+                text-align: left;
+                margin-left: 100px  ;
+
             }
 
-            @include lg {
-                display: none;
+            div {
+                aside {
+                    img {
+                        width: 262px;
+                        height: 262px;
+                    }
+                }
+
+                h2 {
+                    font-size: rem-calc(24)
+                }
+
+                h3 {
+                    font-size: rem-calc(16)
+                }
+
+                h4 {
+                    font-size: rem-calc(16)
+                }
+
+                p {
+                    font-size: rem-calc(16)
+                }
+
+            }
+        }
+
+        @include lg {
+            h1 {
+                font-size: rem-calc(36);
+            }
+
+            div {
+                aside {
+                    img {
+                        width: 341px;
+                        height: 341px;
+                    }
+
+                }
+
+                h2 {
+                    font-size: rem-calc(28)
+                }
+
+                h3 {
+                    font-size: rem-calc(18)
+                }
+
+                h4 {
+                    font-size: rem-calc(18)
+                }
+
+                p {
+                    font-size: rem-calc(18)
+                }
             }
 
         }
 
-        #eventinfolg {
-            display: none;
-
-            @include lg {
-                display: grid;
-                grid-area: eventinfolg;
+        @include xl {
+            h1 {
+                font-size: rem-calc(48);
             }
 
+            div {
+                aside {
+                    img {
+                        width: 445px;
+                        height: 445px;
+                    }
 
-        }
-      
-        
-        #dates {
+                }
 
-            grid-area: dates;
+                h2 {
+                    font-size: rem-calc(36)
+                }
 
-        }
+                h3 {
+                    font-size: rem-calc(21)
+                }
 
-        #picture {
+                h4 {
+                    font-size: rem-calc(21)
+                }
 
-            grid-area: picture;
+                p {
+                    font-size: rem-calc(21)
+                }
+            }
         }
     }
+
+
+    #eventinfo {
+        grid-area: eventinfo;
+
+        @include md {
+            display: none;
+        }
+
+    }
+
+    #eventinfomd {
+        display: none;
+
+        @include md {
+            display: grid;
+            grid-area: eventinfomd;
+        }
+
+        @include lg {
+            display: none;
+        }
+
+    }
+
+    #eventinfolg {
+        display: none;
+
+        @include lg {
+            display: grid;
+            grid-area: eventinfolg;
+        }
+
+
+    }
+
+    #header {
+        display: none;
+
+        @include md {
+            display: grid;
+        }
+    }
+
+    #headermobile {
+        @include md {
+            display: none;
+        }
+    }
+
+    #dates {
+
+        grid-area: dates;
+
+    }
+
+    #picture {
+
+        grid-area: picture;
+    }
+}
