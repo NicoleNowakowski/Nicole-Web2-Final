@@ -7,10 +7,18 @@
         grid-template-areas: ". plan .";
 
     }
-
     @include lg {
-        grid-template-columns: auto 1024px auto;
+        
+        grid-template-columns: 75px auto 75px;
+       
     }
+    @include xl {
+       
+        grid-template-columns: 130px auto 130px;
+        
+    }
+
+   
 
     >div {
         padding-bottom: 24px;
@@ -63,8 +71,9 @@
                     font-size: rem-calc(18);
                     font-weight: 700;
                     color: $maastrichtblue;
-                    padding-top: 5px;
+                    padding-top: 25px;
                     padding-left: 10px;
+                    
                 }
 
                 p {
@@ -90,7 +99,8 @@
             ul {
                 li {
                     h2 {
-                        font-size: rem-calc(24)
+                        font-size: rem-calc(24);
+                        margin:0;
                     }
 
                     p {
@@ -182,6 +192,9 @@
 
         @include lg {
             padding-top: 35px;
+        }
+        @include lg {
+            padding-top: 15px;
         }
 
         
@@ -290,7 +303,20 @@
                 
             }
             button {
-                margin-left: 55px;
+                margin-left: 35px;
+                padding-right: 60px;
+            padding-left: 60px;
+            }
+
+            
+        }
+        @include xl {
+            grid-area: p4;
+            margin: 0;
+            padding-top: 5px;
+          
+            button {
+                margin-left: 90px;
                 padding-right: 60px;
             padding-left: 60px;
             }

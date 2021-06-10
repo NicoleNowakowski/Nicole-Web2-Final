@@ -33,12 +33,12 @@
 
         div {
             display: grid;
-            grid-template-columns: 170px auto;
+            grid-template-columns: 85px auto;
             grid-template-areas: "picture picture"
                 "dates eventinfo";
 
             @include md {
-                grid-template-columns: 105px, 365px, 298px;
+                grid-template-columns: 105px 365px auto;
                 grid-template-areas: "dates eventinfomd picture"
             }
 

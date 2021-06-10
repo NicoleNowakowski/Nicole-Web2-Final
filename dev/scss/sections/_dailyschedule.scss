@@ -23,14 +23,14 @@
 
         h1 {
             text-align: center;
-            font-size: rem-cac(24);
+            font-size: rem-calc(24);
             font-weight: 700;
             color: $maastrichtbluedark;
         }
 
         div {
             display: grid;
-            grid-template-columns: 170px auto;
+            grid-template-columns: 85px auto;
             grid-template-areas: "pic pic"
                 "times dailyevents";
 

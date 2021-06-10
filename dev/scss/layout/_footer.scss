@@ -139,14 +139,14 @@ footer {
 		#hours {
 			display: none;
 
-			@include md {
+			@include lg {
 				display: grid;
 				grid-area: hours;
 
 				h5 {
 					margin-top: 10px;
-					font-weight: 700;
-					font-size: rem-calc(16);
+					font-weight: 500;
+					font-size: rem-calc(14);
 					color: $bluetoruslight;
 					line-height: 60px;
 					text-align: right;

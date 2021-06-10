@@ -725,15 +725,15 @@ footer > div #info ul li a {
 footer > div #hours {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   footer > div #hours {
     display: grid;
     grid-area: hours;
   }
   footer > div #hours h5 {
     margin-top: 10px;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 0.875rem;
     color: #EDEFF6;
     line-height: 60px;
     text-align: right;
@@ -904,13 +904,13 @@ footer > div #socials ul li a:visited:active {
 }
 #dailyschedule > div h1 {
   text-align: center;
-  font-size: rem-cac(24);
+  font-size: 1.5rem;
   font-weight: 700;
   color: #031020;
 }
 #dailyschedule > div div {
   display: grid;
-  grid-template-columns: 170px auto;
+  grid-template-columns: 85px auto;
   grid-template-areas: "pic pic" "times dailyevents";
 }
 @media (min-width: 768px) {
@@ -1061,12 +1061,12 @@ footer > div #socials ul li a:visited:active {
 }
 #upcomingevents > div div {
   display: grid;
-  grid-template-columns: 170px auto;
+  grid-template-columns: 85px auto;
   grid-template-areas: "picture picture" "dates eventinfo";
 }
 @media (min-width: 768px) {
   #upcomingevents > div div {
-    grid-template-columns: 105px, 365px, 298px;
+    grid-template-columns: 105px 365px auto;
     grid-template-areas: "dates eventinfomd picture";
   }
 }
@@ -1241,7 +1241,12 @@ footer > div #socials ul li a:visited:active {
 }
 @media (min-width: 1024px) {
   #plan {
-    grid-template-columns: auto 1024px auto;
+    grid-template-columns: 75px auto 75px;
+  }
+}
+@media (min-width: 1200px) {
+  #plan {
+    grid-template-columns: 130px auto 130px;
   }
 }
 #plan > div {
@@ -1279,7 +1284,7 @@ footer > div #socials ul li a:visited:active {
   font-size: 1.125rem;
   font-weight: 700;
   color: #061F40;
-  padding-top: 5px;
+  padding-top: 25px;
   padding-left: 10px;
 }
 #plan > div ul li p {
@@ -1299,6 +1304,7 @@ footer > div #socials ul li a:visited:active {
   }
   #plan > div ul li h2 {
     font-size: 1.5rem;
+    margin: 0;
   }
   #plan > div ul li p {
     font-size: 1rem;
@@ -1360,6 +1366,11 @@ footer > div #socials ul li a:visited:active {
 @media (min-width: 1024px) {
   #plan #information {
     padding-top: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  #plan #information {
+    padding-top: 15px;
   }
 }
 #plan #specialoffers {
@@ -1453,7 +1464,19 @@ footer > div #socials ul li a:visited:active {
     text-align: center;
   }
   #plan #tickets button {
-    margin-left: 55px;
+    margin-left: 35px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  #plan #tickets {
+    grid-area: p4;
+    margin: 0;
+    padding-top: 5px;
+  }
+  #plan #tickets button {
+    margin-left: 90px;
     padding-right: 60px;
     padding-left: 60px;
   }
@@ -1472,7 +1495,7 @@ footer > div #socials ul li a:visited:active {
 }
 @media (min-width: 1024px) {
   #animals {
-    grid-template-columns: auto 1024px auto;
+    grid-template-columns: auto 950px auto;
     padding-top: 80px;
   }
 }
@@ -1595,7 +1618,7 @@ footer > div #socials ul li a:visited:active {
     font-size: 1.75rem;
   }
   #animals #a1 p {
-    ont-size: 1.3125rem;
+    font-size: 1.3125rem;
   }
 }
 #animals #a2 {
