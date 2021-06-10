@@ -1244,15 +1244,16 @@ footer > div #socials ul li a:visited {
   font-size: 1.125rem;
   font-weight: 700;
   color: #061F40;
-  padding-top: 5pt;
-  padding-left: 10pt;
+  padding-top: 5px;
+  padding-left: 10px;
 }
 #plan > div ul li p {
-  padding-left: 10pt;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #plan > div ul li button {
-  margin-bottom: 18pt;
-  margin-left: 10pt;
+  margin-bottom: 18px;
+  margin-left: 10px;
 }
 @media (min-width: 768px) {
   #plan > div {
@@ -1347,8 +1348,12 @@ footer > div #socials ul li a:visited {
     grid-area: p2;
     margin: 0;
   }
+  #plan #specialoffers h2 {
+    text-align: left;
+  }
   #plan #specialoffers p {
     display: block;
+    text-align: justify;
   }
 }
 #plan #covid {
@@ -1367,8 +1372,12 @@ footer > div #socials ul li a:visited {
     grid-area: p3;
     margin: 0;
   }
+  #plan #covid h2 {
+    text-align: left;
+  }
   #plan #covid p {
     display: block;
+    text-align: justify;
   }
 }
 #plan #tickets {
