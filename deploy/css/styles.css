@@ -1200,7 +1200,7 @@ footer > div #socials ul li a:visited {
 @media (min-width: 768px) {
   #plan {
     display: grid;
-    grid-template-columns: 16px auto 16px;
+    grid-template-columns: 60px auto 60px;
     grid-template-areas: ". plan .";
   }
 }
@@ -1211,11 +1211,6 @@ footer > div #socials ul li a:visited {
 }
 #plan > div {
   padding-bottom: 24px;
-}
-@media (min-width: 768px) {
-  #plan > div {
-    grid-area: plan;
-  }
 }
 #plan > div h1 {
   font-weight: 700;
@@ -1249,7 +1244,7 @@ footer > div #socials ul li a:visited {
   font-size: 1.125rem;
   font-weight: 700;
   color: #061F40;
-  padding-top: 18pt;
+  padding-top: 5pt;
   padding-left: 10pt;
 }
 #plan > div ul li p {
@@ -1258,6 +1253,54 @@ footer > div #socials ul li a:visited {
 #plan > div ul li button {
   margin-bottom: 18pt;
   margin-left: 10pt;
+}
+@media (min-width: 768px) {
+  #plan > div {
+    grid-area: plan;
+  }
+  #plan > div h1 {
+    font-size: 1.75rem;
+  }
+  #plan > div ul li h2 {
+    font-size: 1.5rem;
+  }
+  #plan > div ul li p {
+    font-size: 1rem;
+  }
+  #plan > div ul li i {
+    font-size: 1.9375rem;
+  }
+  #plan > div ul li a {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #plan > div h1 {
+    font-size: 2.25rem;
+  }
+  #plan > div ul li h2 {
+    font-size: 1.75rem;
+  }
+  #plan > div ul li p {
+    font-size: 1.125rem;
+  }
+  #plan > div ul li a {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1200px) {
+  #plan > div h1 {
+    font-size: 3rem;
+  }
+  #plan > div ul li h2 {
+    font-size: 2.25rem;
+  }
+  #plan > div ul li p {
+    font-size: 1.3125rem;
+  }
+  #plan > div ul li a {
+    font-size: 1.3125rem;
+  }
 }
 #plan #information ul {
   display: flex;
@@ -1275,24 +1318,94 @@ footer > div #socials ul li a:visited {
 @media (min-width: 768px) {
   #plan #information {
     grid-area: p1;
+    padding-top: 30px;
   }
+}
+@media (min-width: 1024px) {
+  #plan #information {
+    padding-top: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  #plan #information {
+    padding-top: 55px;
+  }
+}
+#plan #specialoffers {
+  margin-left: 37.5px;
+  margin-right: 37.5px;
+}
+#plan #specialoffers p {
+  display: none;
+}
+#plan #specialoffers button {
+  padding-right: 60px;
+  padding-left: 60px;
 }
 @media (min-width: 768px) {
   #plan #specialoffers {
     grid-area: p2;
+    margin: 0;
   }
+  #plan #specialoffers p {
+    display: block;
+  }
+}
+#plan #covid {
+  margin-left: 37.5px;
+  margin-right: 37.5px;
+}
+#plan #covid p {
+  display: none;
+}
+#plan #covid button {
+  padding-right: 60px;
+  padding-left: 60px;
 }
 @media (min-width: 768px) {
   #plan #covid {
     grid-area: p3;
+    margin: 0;
   }
+  #plan #covid p {
+    display: block;
+  }
+}
+#plan #tickets {
+  margin-left: 37.5px;
+  margin-right: 37.5px;
+}
+#plan #tickets p {
+  display: none;
+}
+#plan #tickets button {
+  margin-left: 150px;
+  padding-right: 60px;
+  padding-left: 60px;
 }
 @media (min-width: 768px) {
   #plan #tickets {
     grid-area: p4;
+    margin: 0;
+  }
+  #plan #tickets p {
+    display: block;
+    text-align: center;
+  }
+  #plan #tickets button {
+    margin-left: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  #plan #tickets {
+    grid-area: p4;
+    margin: 0;
   }
   #plan #tickets p {
     text-align: center;
+  }
+  #plan #tickets button {
+    margin-left: 65px;
   }
 }
 

@@ -3,7 +3,7 @@
 
     @include md {
         display: grid;
-        grid-template-columns: 16px auto 16px;
+        grid-template-columns: 60px auto 60px;
         grid-template-areas: ". plan .";
 
     }
@@ -15,10 +15,6 @@
     >div {
         padding-bottom: 24px;
 
-        @include md {
-            grid-area: plan;
-        }
-
         h1 {
             font-weight: 700;
             font-size: rem-calc(24);
@@ -26,8 +22,6 @@
             text-align: center;
             padding-top: 10px;
         }
-
-
 
         ul {
 
@@ -68,7 +62,7 @@
                     font-size: rem-calc(18pt);
                     font-weight: 700;
                     color: $maastrichtblue;
-                    padding-top: 18pt;
+                    padding-top: 5pt;
                     padding-left: 10pt;
                 }
 
@@ -80,56 +74,199 @@
                     margin-bottom: 18pt;
                     margin-left: 10pt;
                 }
+            }
 
+        }
 
+        @include md {
+            grid-area: plan;
+
+            h1 {
+                font-size: rem-calc(28)
+            }
+
+            ul {
+                li {
+                    h2 {
+                        font-size: rem-calc(24)
+                    }
+
+                    p {
+                        font-size: rem-calc(16)
+                    }
+                    i{
+                        font-size: rem-calc(31);
+                    }
+                    a{
+                        font-size: rem-calc(16)
+                    }
+                }
+            }
+
+        }
+
+        @include lg {
+            h1 {
+                font-size: rem-calc(36)
+            }
+
+            ul {
+                li {
+                    h2 {
+                        font-size: rem-calc(28)
+                    }
+
+                    p {
+                        font-size: rem-calc(18)
+                    }
+                    a{
+                        font-size: rem-calc(18)
+                    }
+                    
+                }
+            }
+
+        }
+
+        @include xl {
+            h1 {
+                font-size: rem-calc(48)
+            }
+
+            ul {
+                li {
+                    h2 {
+                        font-size: rem-calc(36)
+                    }
+
+                    p {
+                        font-size: rem-calc(21)
+                    }
+                    a{
+                        font-size: rem-calc(21)
+                    }
+                }
             }
 
         }
     }
 
-    #information {  
+    #information {
         ul {
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                padding-top: 5px;
-                
-                i{
-                    font-size: 31px;
-                    margin-bottom: 5px;
-                }
-                a{
-                    color: $berryblast;
-                }
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 5px;
+
+            i {
+                font-size: 31px;
+                margin-bottom: 5px;
             }
+
+            a {
+                color: $berryblast;
+            }
+        }
+
         @include md {
             grid-area: p1;
-
-          
-
+padding-top: 30px;
+        }
+        @include lg{
+            padding-top: 35px;
+        }
+        @include xl{
+            padding-top: 55px;
         }
     }
 
     #specialoffers {
+        margin-left: 37.5px;
+        margin-right: 37.5px;
+
+        p {
+            display: none;
+        }
+
+        button {
+            padding-right: 60px;
+            padding-left: 60px;
+        }
+
         @include md {
             grid-area: p2;
+            margin: 0;
+
+            p {
+                display: block;
+            }
         }
     }
 
     #covid {
+        margin-left: 37.5px;
+        margin-right: 37.5px;
+
+        p {
+            display: none;
+        }
+
+        button {
+            padding-right: 60px;
+            padding-left: 60px;
+        }
+
         @include md {
             grid-area: p3;
+            margin: 0;
+
+            p {
+                display: block;
+            }
         }
     }
 
     #tickets {
+        margin-left: 37.5px;
+        margin-right: 37.5px;
+
+        p {
+            display: none;
+        }
+
+        button {
+            margin-left: 150px;
+            padding-right: 60px;
+            padding-left: 60px;
+        }
+
         @include md {
             grid-area: p4;
-            p{
+
+            p {
+                display: block;
                 text-align: center;
             }
-          
-        
+
+            button {
+                margin-left: 15px;
+            }
+
+            margin: 0;
+        }
+
+        @include lg {
+            grid-area: p4;
+
+            p {
+                text-align: center;
+            }
+
+            button {
+                margin-left: 65px;
+            }
+
+            margin: 0;
+        }
     }
-}
 }
