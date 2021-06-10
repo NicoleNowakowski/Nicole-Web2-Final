@@ -38,6 +38,7 @@
                 background-color: $bluetoruslight;
 
                 ul {
+                    
                     li {
                         h2 {
                             display: none;
@@ -197,6 +198,7 @@
         }
 
         button {
+            margin-left: 150px;
             padding-right: 60px;
             padding-left: 60px;
         }
@@ -213,6 +215,9 @@
                 display: block;
                 text-align: justify;
             }
+            button{
+                margin-left: 10px;
+            }
         }
     }
 
@@ -225,6 +230,7 @@
         }
 
         button {
+            margin-left: 150px;
             padding-right: 60px;
             padding-left: 60px;
         }
@@ -240,6 +246,9 @@
             p {
                 display: block;
                 text-align: justify;
+            }
+            button{
+                margin-left: 10px;
             }
         }
     }
@@ -260,7 +269,7 @@
 
         @include md {
             grid-area: p4;
-
+            margin: 0;
             p {
                 display: block;
                 text-align: center;
@@ -270,12 +279,12 @@
                 margin-left: 15px;
             }
 
-            margin: 0;
+           
         }
 
         @include lg {
             grid-area: p4;
-
+            margin: 0;
             p {
                 text-align: center;
             }
@@ -284,7 +293,7 @@
                 margin-left: 65px;
             }
 
-            margin: 0;
+            
         }
     }
 }

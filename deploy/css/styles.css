@@ -616,14 +616,18 @@ header #nav-container {
     Footer
 ============= */
 footer {
-  padding: 16px;
   background-color: #031020;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   footer {
     display: grid;
     grid-template-areas: ". footer .";
-    grid-template-columns: auto 1200px auto;
+    grid-template-columns: 10px auto 10px;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    grid-template-columns: 50px auto 50px;
   }
 }
 footer > div {
@@ -634,17 +638,14 @@ footer > div {
 }
 @media (min-width: 768px) {
   footer > div {
-    grid-template-areas: "socials . hours info";
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (min-width: 1200px) {
-  footer > div {
     grid-area: footer;
+    grid-template-areas: "socials  hours info";
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 footer > div section {
   padding-top: 16px;
+  margin-left: 10px;
 }
 footer > div section div ul {
   display: flex;
@@ -654,6 +655,9 @@ footer > div section div ul li {
 }
 footer > div section div ul li a {
   color: white;
+}
+footer > div section div ul li a i {
+  font-size: 20px;
 }
 footer > div section p {
   color: #EDEFF6;
@@ -670,74 +674,105 @@ footer > div section p {
     font-size: 1rem;
   }
 }
-@media (min-width: 768px) {
-  footer > div #info {
-    grid-area: info;
+@media (min-width: 1200px) {
+  footer > div section p {
+    font-size: 1.125rem;
   }
+}
+footer > div #info ul {
+  padding-top: 30px;
+  padding-left: 60px;
+}
+footer > div #info ul li {
+  display: flex;
+  padding-bottom: 20px;
 }
 footer > div #info ul li i {
   color: #C1C0E1;
-  font-size: 31px;
+  font-size: 30px;
   text-align: center;
+  margin-right: 10px;
 }
 footer > div #info ul li address {
   color: #EDEFF6;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 footer > div #info ul li a {
   color: #EDEFF6;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  footer > div #info {
+    grid-area: info;
+  }
+  footer > div #info address {
+    font-size: 1rem;
+  }
+  footer > div #info a {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  footer > div #info address {
+    font-size: 1.125rem;
+  }
+  footer > div #info a {
+    font-size: 1.125rem;
+  }
 }
 footer > div #hours {
   display: none;
-}
-footer > div #hours h5 {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #EDEFF6;
 }
 @media (min-width: 768px) {
   footer > div #hours {
     display: grid;
     grid-area: hours;
   }
+  footer > div #hours h5 {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #EDEFF6;
+    line-height: 60px;
+    text-align: right;
+  }
+}
+@media (min-width: 1200px) {
+  footer > div #hours h5 {
+    font-size: 1.125rem;
+  }
+}
+footer > div #socials {
+  margin-top: 100px;
 }
 @media (min-width: 768px) {
   footer > div #socials {
     grid-area: social;
-    margin-top: -100px;
   }
-}
-@media (min-width: 1024px) {
-  footer > div #socials {
-    margin-top: 0px;
-  }
-}
-footer > div #socials ul {
-  border: none;
-  display: flex;
-}
-@media (min-width: 1024px) {
   footer > div #socials ul {
-    justify-content: flex-end;
+    border: none;
+    display: flex;
+  }
+  footer > div #socials ul li a i {
+    font-size: 40px;
+  }
+  footer > div #socials ul li a:link:hover, footer > div #socials ul li a:link:active,
+footer > div #socials ul li a:visited:hover,
+footer > div #socials ul li a:visited:active {
+    color: #000;
+  }
+  footer > div #socials p {
+    font-size: 1rem;
   }
 }
-footer > div #socials ul li {
-  margin-right: 16px;
-}
-@media (min-width: 1024px) {
-  footer > div #socials ul li {
-    margin-left: 16px;
-    margin-right: 0px;
+@media (min-width: 1200px) {
+  footer > div #socials p {
+    font-size: 1.125rem;
   }
 }
-footer > div #socials ul li a:link,
-footer > div #socials ul li a:visited {
-  color: #fff;
-  font-size: 1.875rem;
-}
+
 #hero {
   align-items: flex-end;
   background-image: url("../img/hero/herophoto.jpg");
@@ -1340,6 +1375,7 @@ footer > div #socials ul li a:visited {
   display: none;
 }
 #plan #specialoffers button {
+  margin-left: 150px;
   padding-right: 60px;
   padding-left: 60px;
 }
@@ -1355,6 +1391,9 @@ footer > div #socials ul li a:visited {
     display: block;
     text-align: justify;
   }
+  #plan #specialoffers button {
+    margin-left: 10px;
+  }
 }
 #plan #covid {
   margin-left: 37.5px;
@@ -1364,6 +1403,7 @@ footer > div #socials ul li a:visited {
   display: none;
 }
 #plan #covid button {
+  margin-left: 150px;
   padding-right: 60px;
   padding-left: 60px;
 }
@@ -1378,6 +1418,9 @@ footer > div #socials ul li a:visited {
   #plan #covid p {
     display: block;
     text-align: justify;
+  }
+  #plan #covid button {
+    margin-left: 10px;
   }
 }
 #plan #tickets {
@@ -1444,6 +1487,7 @@ footer > div #socials ul li a:visited {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 8px;
+  margin-top: 0;
   color: #031020;
   margin-left: 10px;
 }
@@ -1667,6 +1711,8 @@ footer > div #socials ul li a:visited {
 #events > div ul li button {
   margin-left: 10px;
   margin-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 @media (min-width: 768px) {
   #events > div {
