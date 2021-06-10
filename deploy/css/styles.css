@@ -454,73 +454,71 @@ header > div {
 }
 @media (min-width: 1024px) {
   header > div {
-    grid-template-areas: "logo nav . social" "logo nav . search";
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "logo nav social" "logo nav search";
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-
-#logo {
+header #logo {
   grid-area: logo;
 }
-#logo img {
+header #logo img {
   width: 300px;
 }
 @media (min-width: 768px) {
-  #logo img {
+  header #logo img {
     width: 367px;
   }
 }
 @media (min-width: 1024px) {
-  #logo img {
+  header #logo img {
     width: 395px;
   }
 }
 @media (min-width: 1200px) {
-  #logo img {
-    width: 537px;
+  header #logo img {
+    width: 500px;
   }
 }
-
-#social {
+header #social {
   display: none;
 }
 @media (min-width: 1024px) {
-  #social {
+  header #social {
     display: flex;
     justify-content: flex-end;
     grid-area: social;
   }
-  #social li {
+  header #social li {
     padding: 10px;
   }
-  #social li a {
+  header #social li a {
     color: white;
   }
-  #social li a:link,
-#social li a:visited {
+  header #social li a:link,
+header #social li a:visited {
     color: #fff;
     font-size: 1.875rem;
   }
-  #social li a:link:hover, #social li a:link:active,
-#social li a:visited:hover,
-#social li a:visited:active {
+  header #social li a:link:hover, header #social li a:link:active,
+header #social li a:visited:hover,
+header #social li a:visited:active {
     color: #000;
   }
 }
-
-#search {
+header #search {
   display: none;
 }
 @media (min-width: 1024px) {
-  #search {
+  header #search {
     display: inline-block;
+    text-align: right;
     grid-area: search;
   }
 }
-#search form {
+header #search form {
   position: relative;
 }
-#search input {
+header #search input {
   background-color: #fff;
   color: #031020;
   border: 1pt #061D58;
@@ -529,39 +527,39 @@ header > div {
   z-index: 5;
   text-indent: 18px;
 }
-#search input::placeholder {
+header #search input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #031020;
   /* Firefox */
   opacity: 1;
 }
-#search input:-ms-input-placeholder {
+header #search input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #031020;
 }
-#search input::-ms-input-placeholder {
+header #search input::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #031020;
 }
 @media (min-width: 768px) {
-  #search input {
+  header #search input {
     width: 175px;
   }
 }
 @media (min-width: 1024px) {
-  #search input {
+  header #search input {
     width: 235px;
   }
 }
 @media (min-width: 1200px) {
-  #search input {
+  header #search input {
     width: 355px;
   }
 }
-#search input input:focus {
+header #search input input:focus {
   outline: none;
 }
-#search button {
+header #search button {
   position: absolute;
   width: 30px;
   height: 100%;
@@ -569,11 +567,10 @@ header > div {
   background-color: white;
   border: none;
 }
-#search button i {
+header #search button i {
   color: #EA68B0;
 }
-
-#burger-container {
+header #burger-container {
   align-items: center;
   display: flex;
   grid-area: burger;
@@ -581,35 +578,37 @@ header > div {
   color: white;
 }
 @media (min-width: 1024px) {
-  #burger-container {
+  header #burger-container {
     display: none;
   }
 }
-#burger-container i {
+header #burger-container i {
   cursor: pointer;
   font-size: 1.875rem;
 }
-
-#nav-container {
+header #nav-container {
   display: none;
   grid-area: nav;
   padding: 25px 10px 10px;
 }
-#nav-container ul {
-  display: flex;
-  justify-content: flex-end;
-}
-#nav-container ul li {
-  padding-right: 30px;
-}
-#nav-container ul li a {
-  font-size: 1rem;
-  font-weight: 400;
-}
 @media (min-width: 1024px) {
-  #nav-container {
+  header #nav-container {
     display: block;
     color: white;
+  }
+  header #nav-container ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  header #nav-container ul li {
+    text-align: center;
+    padding-right: 15px;
+    padding-top: 15px;
+  }
+  header #nav-container ul li a {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
   }
 }
 
@@ -779,6 +778,11 @@ footer > div #socials ul li a:visited {
 #hero div p {
   display: none;
 }
+#hero #text button {
+  margin-left: 40px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
 @media (min-width: 768px) {
   #hero #text h1 {
     text-align: left;
@@ -793,75 +797,48 @@ footer > div #socials ul li a:visited {
   }
   #hero #text button {
     text-align: left;
+    margin: 0;
+  }
+  #hero #text #textmd {
+    display: grid;
+  }
+  #hero #text #textlg {
+    display: none;
+  }
+  #hero #text #textel {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
   #hero #text h1 {
-    text-align: left;
     font-size: 2.25rem;
   }
   #hero #text p {
-    text-align: left;
     font-size: 1.125rem;
   }
-  #hero #text button {
-    text-align: left;
+  #hero #text #textmd {
+    display: none;
+  }
+  #hero #text #textlg {
+    display: grid;
+  }
+  #hero #text #textxl {
+    display: none;
   }
 }
 @media (min-width: 1200px) {
   #hero #text h1 {
-    text-align: left;
     font-size: 3rem;
   }
   #hero #text p {
-    text-align: left;
     font-size: 1.3125rem;
   }
-  #hero #text button {
-    text-align: left;
-  }
-}
-@media (min-width: 768px) {
-  #hero #text #textmd {
-    display: grid;
-  }
-}
-@media (min-width: 1024px) {
   #hero #text #textmd {
     display: none;
   }
-}
-@media (min-width: 1200px) {
-  #hero #text #textmd {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
   #hero #text #textlg {
     display: none;
   }
-}
-@media (min-width: 1024px) {
-  #hero #text #textlg {
-    display: grid;
-  }
-}
-@media (min-width: 1200px) {
-  #hero #text #textlg {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  #hero #text #textxl {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  #hero #text #textxl {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
   #hero #text #textxl {
     display: grid;
   }
@@ -898,7 +875,7 @@ footer > div #socials ul li a:visited {
 }
 #dailyschedule > div div {
   display: grid;
-  grid-template-columns: 160px auto;
+  grid-template-columns: 170px auto;
   grid-template-areas: "pic pic" "times dailyevents";
 }
 @media (min-width: 768px) {

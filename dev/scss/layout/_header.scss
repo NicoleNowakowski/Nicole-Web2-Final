@@ -18,184 +18,180 @@ header {
 
 		@include lg {
 			grid-template-areas:
-				"logo nav . social"
-				"logo nav . search";
-			grid-template-columns: repeat(4, 1fr);
+				"logo nav social"
+				"logo nav search";
+			grid-template-columns: repeat(3, 1fr);
 
 		}
-
 	}
-}
-
-#logo {
-	grid-area: logo;
 
 
-	img {
-		width: 300px;
+	#logo {
+		grid-area: logo;
 
-		@include md {
-			width: 367px;
+		img {
+			width: 300px;
+
+			@include md {
+				width: 367px;
+			}
+
+			@include lg {
+				width: 395px;
+			}
+
+			@include xl {
+				width: 500px;
+			}
 		}
+	}
+
+
+	#social {
+		display: none;
 
 		@include lg {
-			width: 395px;
-		}
+			display: flex;
+			justify-content: flex-end;
+			grid-area: social;
 
-		@include xl {
-			width: 537px;
-		}
-	}
-}
-
-
-#social {
-display: none;
-
-	@include lg {
-		display: flex;
-		justify-content: flex-end;
-		grid-area: social;
-	
 			li {
 				padding: 10px;
-				
-		
+
 				a {
 					color: white;
 				}
-		
+
 				a:link,
 				a:visited {
 					color: $white;
 					font-size: rem-calc(30);
-		
+
 					&:hover,
 					&:active {
 						color: $black;
 					}
 				}
 			}
-		
-		
-		
-	}
-
-}
-
-
-
-
-#search {
-	display: none;
-
-	@include lg {
-		display: inline-block;
-		grid-area: search;
-	}
-
-	form {
-
-		position: relative;
+		}
 
 	}
 
-	input {
-		background-color: $white;
-		color: $maastrichtbluedark;
-		border: 1pt $bluetorusdark;
-		border-radius: 25px;
-		padding: 5px 5px 5px 25px;
-		z-index: 5;
-		text-indent: 18px;
-
-
-		&::placeholder {
-			/* Chrome, Firefox, Opera, Safari 10.1+ */
-			color: $maastrichtbluedark;
-			/* Firefox */
-			opacity: 1;
-		}
-
-		&:-ms-input-placeholder {
-			/* Internet Explorer 10-11 */
-			color: $maastrichtbluedark;
-		}
-
-		&::-ms-input-placeholder {
-			/* Microsoft Edge */
-			color: $maastrichtbluedark;
-		}
-
-		@include md {
-			width: 175px;
-		}
+	#search {
+		display: none;
 
 		@include lg {
-			width: 235px;
+			display: inline-block;
+			text-align: right;
+			grid-area: search;
 		}
 
-		@include xl {
-			width: 355px;
+		form {
+			position: relative;
 		}
 
+		input {
+			background-color: $white;
+			color: $maastrichtbluedark;
+			border: 1pt $bluetorusdark;
+			border-radius: 25px;
+			padding: 5px 5px 5px 25px;
+			z-index: 5;
+			text-indent: 18px;
 
-		input:focus {
-			outline: none;
+
+			&::placeholder {
+				/* Chrome, Firefox, Opera, Safari 10.1+ */
+				color: $maastrichtbluedark;
+				/* Firefox */
+				opacity: 1;
+			}
+
+			&:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
+				color: $maastrichtbluedark;
+			}
+
+			&::-ms-input-placeholder {
+				/* Microsoft Edge */
+				color: $maastrichtbluedark;
+			}
+
+			@include md {
+				width: 175px;
+			}
+
+			@include lg {
+				width: 235px;
+			}
+
+			@include xl {
+				width: 355px;
+			}
+
+			input:focus {
+				outline: none;
+			}
+		}
+
+		button {
+			position: absolute;
+			width: 30px;
+			height: 100%;
+			border-radius: 25px;
+			background-color: white;
+			border: none;
+
+			i {
+				color: $berryblast;
+			}
 		}
 	}
 
-	button {
-		position: absolute;
-		width: 30px;
-		height: 100%;
-		border-radius: 25px;
-		background-color: white;
-		border: none;
+
+	#burger-container {
+		align-items: center;
+		display: flex;
+		grid-area: burger;
+		padding-left: 50px;
+		color: white;
+
+		@include lg {
+			display: none;
+		}
 
 		i {
-			color: $berryblast;
+			cursor: pointer;
+			font-size: rem-calc(30);
 		}
 	}
-}
 
-
-#burger-container {
-	align-items: center;
-	display: flex;
-	grid-area: burger;
-	padding-left: 50px;
-	color: white;
-
-	@include lg {
+	#nav-container {
 		display: none;
-	}
+		grid-area: nav;
+		padding: 25px 10px 10px;
 
-	i {
-		cursor: pointer;
-		font-size: rem-calc(30);
-	}
-}
+		@include lg {
+			display: block;
+			color: white;
 
-#nav-container {
-	display: none;
-	grid-area: nav;
-	padding: 25px 10px 10px;
-ul{
-	display: flex;
-	justify-content: flex-end;
-	li{
-		padding-right: 30px;
-		a {
-		font-size: rem-calc(16);
-		font-weight: 400;
-	}
+			ul {
+				display: flex;
+				justify-content: flex-end;
 
-	}
-}
-	
-	@include lg {
-		display: block;
-		color: white;
+				li {
+					text-align: center;
+					padding-right: 15px;
+					padding-top: 15px;
+
+					a {
+						color: white;
+						font-size: rem-calc(16);
+						font-weight: 400;
+					}
+
+				}
+			}
+		}
 	}
 }

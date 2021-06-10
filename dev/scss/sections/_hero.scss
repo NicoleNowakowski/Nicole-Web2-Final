@@ -11,12 +11,10 @@
         min-height: 400px;
         align-items: flex-end;
         justify-content: flex-start;
-
     }
 
     @include lg {
         min-height: 550px;
-
     }
 
     @include xl {
@@ -38,9 +36,15 @@
         p {
             display: none;
         }
+      
     }
 
     #text {
+        button{
+            margin-left: 40px;
+            padding-right: 50px;
+            padding-left:50px;
+        }
 
         @include md {
             h1 {
@@ -58,84 +62,39 @@
 
             button {
                 text-align: left;
+                margin:0;
             }
-
+            #textmd{ display:grid;}
+            #textlg{display: none;}
+            #textel{display:none;}
         }
 
         @include lg {
             h1 {
-                text-align: left;
                 font-size: rem-calc(36);
             }
 
             p {
-                text-align: left;
                 font-size: rem-calc(18);
             }
-
-            button {
-                text-align: left;
-            }
+            #textmd{display: none;}
+            #textlg{display: grid;}
+            #textxl{display: none;}
         }
 
 
         @include xl {
             h1 {
-                text-align: left;
                 font-size: rem-calc(48);
             }
 
             p {
-                text-align: left;
                 font-size: rem-calc(21);
             }
-
-            button {
-                text-align: left;
-            }
+            #textmd{display: none;}
+            #textlg{display: none;}
+            #textxl{display: grid;}
         }
 
-        #textmd {
-            @include md {
-                display: grid;
-            }
-
-            @include lg {
-                display: none;
-            }
-
-            @include xl {
-                display: none;
-            }
-        }
-
-        #textlg {
-            @include md {
-                display: none;
-            }
-
-            @include lg {
-                display: grid;
-            }
-
-            @include xl {
-                display: none;
-            }
-        }
-
-        #textxl {
-            @include md {
-                display: none;
-            }
-
-            @include lg {
-                display: none;
-            }
-
-            @include xl {
-                display: grid;
-
-            }
-        }
     }
 }
